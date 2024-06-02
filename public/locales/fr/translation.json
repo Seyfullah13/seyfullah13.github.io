@@ -1,0 +1,33 @@
+{
+  "greeting": "Bonjour, je suis Seyfullah Ozdal",
+  "profession": "Développeur web junior",
+  "link1": "Profil",
+  "link2": "CV",
+  "link3": "Compétences",
+  "link4": "Portfolio",
+  "link5": "Contact",
+  "description": {
+    "line1": "Je recherche un stage du 19 août au 25 octobre 2024, motivé et passionné.",
+    "line2": "Mes études m'ont permis de développer des compétences en organisation, gestion de projet et travail d'équipe, et je suis convaincu de pouvoir apporter une valeur ajoutée à votre équipe.",
+    "line3": "Grâce à ma formation en Développeur Web et Web Mobile à l'AFPA de Beaumont (63), je suis capable de concevoir, développer et maintenir des applications web de qualité en utilisant les dernières technologies."
+  },
+  "titre": "Mon CV",
+  "button1": "Télécharger le CV",
+  "title1": "Mon Portfolio",
+  "subtitle": "Ci-dessous quelques exemples de réalisations réalisées durant la formation",
+  "button2": "Tous",
+  "project1": "Juste prix",
+  "project2": "Pendu",
+  "surname": "Nom",
+  "name": "Prénom",
+  "mail": "E-mail",
+  "object": "Objet",
+  "message": "Votre Message",
+  "button3": "Envoyer",
+  "button4": "Annuler",
+  "contact": "Vous pouvez également me contacter via:",
+  "copyrigths": "© 2024 Mon Portfolio",
+  "rights": "Tout droits réservés",
+  "skills": "Compétences",
+  "operatingSystems": "Système d'exploitation"
+}

@@ -1,0 +1,189 @@
+/* Reset global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Navigation bar styles */
+#nav {
+  background-color: #38605d;
+  z-index: 1;
+  width: 100%;
+}
+
+/* CV styles */
+.cv-container {
+  padding: 20px;
+}
+
+.cv-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cv-content {
+  margin-bottom: 20px;
+}
+
+.cv-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.cv-button {
+  display: block;
+  margin: 0 auto;
+  width: 200px; /* Adjust button width as needed */
+}
+
+/* Progress bar custom style */
+.progress-bar-custom {
+  background-color: #000000; /* Black */
+}
+
+/* Compétence card styles */
+.compétence {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.compétence:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.compétence img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Progress styles */
+.progress {
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background-color: #007bff;
+}
+
+/* Flex container for CV and Compétences */
+.cv-compétences-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between components if necessary */
+  justify-content: center;
+  padding: 20px;
+}
+
+.cv-compétences-container > div {
+  flex: 1 1 300px; /* Adjust the basis as needed for responsiveness */
+  max-width: 600px; /* Ensure the components don't grow too large */
+}
+
+/* Container padding */
+.container {
+  padding: 20px;
+}
+
+/* Global card styles */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.badge {
+  font-size: 0.8rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card .card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.project-card .card-body {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card {
+  margin-bottom: 20px;
+}
+
+.mastermind-card {
+  /* Ajoutez ici les styles spécifiques à la carte du Mastermind */
+  height: 200px; /* Par exemple, définissez la hauteur de la carte */
+}
+.links {
+  background-color: white;
+}
+#profil {
+  width: 100vw;
+  min-height: 100vh; /* Utilisation de min-height pour garantir que le conteneur a au moins la taille de l'écran */
+  margin: auto;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  text-align: center;
+  display: flex; /* Utilisation de flexbox pour organiser les éléments */
+  flex-direction: column; /* Empiler les éléments les uns sur les autres */
+  justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
+}
+
+#profil-content {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+.nav-link {
+  color: black !important;
+}
+.card-alt {
+  background-color: white;
+}
+
+/* Footer.module.css */
+footer {
+  width: 100%; /* Utilisation de la largeur totale */
+  background-color: #ccc; /* Couleur de fond pour le pied de page */
+  padding: 10px 0; /* Espacement intérieur du pied de page */
+}
