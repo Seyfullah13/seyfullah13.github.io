@@ -1,14 +1,14 @@
-import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Informations from "./Informations";
-import Profil from "./Profil";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Cv from "./CV";
-import Portfolio from "./Portfolio";
-import Contact from "./Contact";
 import Competences from "./Compétences";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Header from "./Header";
+import Informations from "./Informations";
+import Portfolio from "./Portfolio";
+import Profil from "./Profil";
 
 function App() {
   return (
@@ -34,3 +34,4 @@ function App() {
 }
 
 export default App;
+
