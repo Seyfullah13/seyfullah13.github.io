@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Tab, Nav } from 'react-bootstrap';
-import { motion, useAnimation } from 'framer-motion';
-import PortfolioBackground from './images/Portfolio.jpg';
-import { useTranslation } from 'react-i18next';
 import 'animate.css/animate.min.css';
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { Card, Col, Container, Nav, Row, Tab } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+import PortfolioBackground from './images/Portfolio.jpg';
 
 // Importer les images de projet
-import image7 from './images/justeprix.PNG';
-import image8 from './images/Myuka.PNG';
 import image9 from './images/Mastermind.PNG';
+import image8 from './images/Myuka.PNG';
 import image10 from './images/Pendu.PNG';
+import image7 from './images/justeprix.PNG';
 
 // Définir le tableau des projets
 const projects = [
   {
     id: 7,
     title: "Juste prix",
-    link: "https://seyfullah13.github.io/Justeprix.github.io/",
+    link: "https://seyfullah13.github.io/Justeprix/",
     tags: ["JavaScript"],
     imageSrc: image7,
     altText: "Projet JavaScript"
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 9,
     title: "Mastermind",
-    link: "https://seyfullah13.github.io/Mastermind2.github.io/",
+    link: "https://seyfullah13.github.io/Mastermind2/",
     tags: ["JavaScript"],
     imageSrc: image9,
     altText: "Projet JavaScript"
@@ -40,7 +40,7 @@ const projects = [
   {
     id: 10,
     title: "Pendu",
-    link: "https://seyfullah13.github.io/pendu.github.io/",
+    link: "https://seyfullah13.github.io/pendu/",
     tags: ["JavaScript"],
     imageSrc: image10,
     altText: "Projet JavaScript"
