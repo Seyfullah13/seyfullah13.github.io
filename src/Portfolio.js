@@ -16,7 +16,7 @@ const projects = [
   {
     id: 7,
     title: "Juste prix",
-    link: "https://seyfullah13.github.io/Justeprix/",
+    link: "https://seyfullah13.github.io/justeprix/",
     tags: ["JavaScript"],
     imageSrc: image7,
     altText: "Projet JavaScript"
