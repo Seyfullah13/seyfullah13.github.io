@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c368c18.css",
+    "main.js": "/static/js/main.f4262a76.js",
+    "static/media/CVSeyf.jpg": "/static/media/CVSeyf.18e99bfb3548a880ae94.jpg",
+    "static/media/Skills.jpg": "/static/media/Skills.b5c860ac663af9ac025d.jpg",
+    "static/media/Portfolio.jpg": "/static/media/Portfolio.ed0143bf484c61aa190b.jpg",
+    "static/media/Profile.jpg": "/static/media/Profile.dc86a66a63b6979bcbb4.jpg",
+    "static/media/Logo site .jpg": "/static/media/Logo site .6c2f8fa9545e08c94f07.jpg",
+    "static/media/background.jpg": "/static/media/background.55660fcb06e0d61eee1d.jpg",
+    "static/media/Contact.jpg": "/static/media/Contact.5af60a705bfbd72f4ccb.jpg",
+    "static/media/CV Seyf2.png": "/static/media/CV Seyf2.51458b660de882ab8027.png",
+    "static/media/justeprix.PNG": "/static/media/justeprix.8f7b6b7c4f57a28d5b78.PNG",
+    "static/media/CVSeyf.pdf": "/static/media/CVSeyf.e47de7432cfbefab8eba.pdf",
+    "static/media/dev.png": "/static/media/dev.336b4cbea40caa025753.png",
+    "static/media/CVSO2.pdf": "/static/media/CVSO2.ce7d0748e1920a3e8184.pdf",
+    "static/media/Pendu.PNG": "/static/media/Pendu.9014829d795f12a723d2.PNG",
+    "static/media/Myuka.PNG": "/static/media/Myuka.51d2dbf221c52b8c8698.PNG",
+    "static/media/Mastermind.PNG": "/static/media/Mastermind.6474bb8a689d5cc81959.PNG",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.2c368c18.css.map": "/static/css/main.2c368c18.css.map",
+    "main.f4262a76.js.map": "/static/js/main.f4262a76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c368c18.css",
+    "static/js/main.f4262a76.js"
+  ]
+}

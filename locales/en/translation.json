@@ -1,0 +1,33 @@
+{
+  "greeting": "Hello, I am Seyfullah Ozdal",
+  "profession": "Junior web developer",
+  "link1": "Profile",
+  "link2": "CV",
+  "link3": "Skills",
+  "link4": "Portfolio",
+  "link5": "Contact",
+  "description": {
+    "line1": "I am looking for an internship from August 19th to October 25th, 2024, motivated and passionate.",
+    "line2": "My studies have allowed me to develop skills in organization, project management, and teamwork, and I am convinced that I can bring added value to your team.",
+    "line3": "Thanks to my training as a Web and Mobile Web Developer at AFPA de Beaumont (63), I am capable of designing, developing, and maintaining high-quality web applications using the latest technologies."
+  },
+  "titre": "My CV",
+  "button1": "Download CV",
+  "title1": "My Portfolio",
+  "subtitle": "Below are a few examples of projects completed during the training",
+  "button2": "All",
+  "project1": "Just Price",
+  "project2": "Hangman",
+  "surname": "Last Name",
+  "name": "First Name",
+  "mail": "E-mail",
+  "object": "Subject",
+  "message": "Your Message",
+  "button3": "Send",
+  "button4": "Cancel",
+  "contact": "You can also contact me via:",
+  "copyrigths": "© 2024 My Portfolio",
+  "rights": "All rights reserved",
+  "skills": "Skills",
+  "operatingSystems": "Operating Systems"
+}
