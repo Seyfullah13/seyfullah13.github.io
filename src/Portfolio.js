@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import PortfolioBackground from './images/dev.png';
+import './index.css'; // Assurez-vous d'importer votre fichier CSS
 
-// Importer les images de projet
+// Importez les images de projet
 import image9 from './images/Mastermind.PNG';
 import image8 from './images/Myuka.PNG';
 import image10 from './images/Pendu.PNG';
 import image7 from './images/justeprix.PNG';
 
-// Définir le tableau des projets
+// Définissez le tableau des projets
 const projects = [
   {
     id: 7,
@@ -18,7 +19,7 @@ const projects = [
     link: "https://seyfullah13.github.io/justeprix/",
     tags: ["JavaScript"],
     imageSrc: image7,
-    altText: "Projet JavaScript"
+    altText: "Projet JavaScript",
   },
   {
     id: 8,
@@ -26,7 +27,7 @@ const projects = [
     link: "https://seyfullah13.github.io/Myuka/",
     tags: ["React"],
     imageSrc: image8,
-    altText: "Projet React"
+    altText: "Projet React",
   },
   {
     id: 9,
@@ -60,20 +61,20 @@ const getBadgeColor = (tag) => {
 
 // Fonction pour obtenir le titre du projet
 const getProjectTitle = (project, t) => {
-  if (project.id === 7) {
-    return t("project1");
-  } else if (project.id === 10) {
-    return t("project2");
-  } else {
-    return project.title;
+  switch (project.id) {
+    case 7:
+      return t("project1");
+    case 10:
+      return t("project2");
+    default:
+      return project.title;
   }
 };
 
 function Portfolio() {
-  // État pour suivre l'onglet actif
-  const [activeTab, setActiveTab] = useState('all');
-  const controls = useAnimation();
   const { t } = useTranslation();
+  const controls = useAnimation();
+  const [activeTab, setActiveTab] = useState('all');
 
   // Fonction pour changer l'onglet actif
   const handleTabChange = (tab) => {
@@ -96,12 +97,13 @@ function Portfolio() {
     });
   }, [controls]);
 
+  // Styles CSS pour le fond et l'overlay
   const backgroundStyle = {
     backgroundImage: `url(${PortfolioBackground})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center', // Centre l'image de fond
     padding: '20px',
-    minHeight: '100vh', // Réglage de la hauteur pour couvrir toute la page
+    borderRadius: '10px',
+    minHeight: '100vh', // Hauteur pour couvrir toute la page
   };
 
   const overlayStyle = {
@@ -111,10 +113,11 @@ function Portfolio() {
     marginBottom: '20px',
   };
 
+  // Animation pour chaque projet
   const projectAnimation = {
     initial: { opacity: 0, x: -200 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.50, ease: "backInOut" }
+    transition: { duration: 0.5, ease: "linear" } // Transition linéaire pour les animations de projet
   };
 
   return (
@@ -124,7 +127,7 @@ function Portfolio() {
           style={overlayStyle}
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.50, ease: "backInOut" }}
+          transition={{ duration: 0.5, ease: "linear" }} // Transition linéaire pour l'overlay
         >
           <h1 className="text-center mb-5" id='portfolio'>{t("title1")}</h1>
           <h2>{t("subtitle")}</h2>
@@ -151,7 +154,18 @@ function Portfolio() {
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                   <motion.div {...projectAnimation}>
                     <Card className="h-100">
-                      <Card.Img variant="top" src={project.imageSrc} alt={project.altText} style={{ objectFit: 'cover', height: '200px' }} />
+                    <Card.Img
+  variant="top"
+  src={project.imageSrc}
+  alt={project.altText}
+  style={{
+    objectFit: 'contain', // Pour s'assurer que l'image est entièrement visible sans être coupée
+    height: 'auto',       // Hauteur automatique pour maintenir les proportions
+    maxWidth: '100%',     // Largeur maximale de l'image
+    maxHeight: '200px',   // Hauteur maximale souhaitée pour éviter les images trop grandes
+  }}
+/>
+
                       <Card.Body>
                         <Card.Title>{getProjectTitle(project, t)}</Card.Title>
                         <div className="tags mb-2">

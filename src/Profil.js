@@ -11,17 +11,10 @@ function Profil() {
   const { t } = useTranslation();
   const { line1, line2, line3 } = t("description");
 
-  const textAnimation = {
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5, ease: "backInOut" }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
       id="profil"
       className={styles.profilContainer}
       style={{ backgroundImage: `url(${profileImage})`, minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -34,21 +27,24 @@ function Profil() {
           <motion.p
             className={styles.paragraph}
             style={{ fontSize: '16px', maxHeight: '200px', overflow: 'auto' }}
-            {...textAnimation}
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
           >
             {line1}
           </motion.p>
           <motion.p
             className={styles.paragraph}
             style={{ fontSize: '16px', maxHeight: '200px', overflow: 'auto' }}
-            {...textAnimation}
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
           >
             {line2}
           </motion.p>
           <motion.p
             className={styles.paragraph}
             style={{ fontSize: '16px', maxHeight: '200px', overflow: 'auto' }}
-            {...textAnimation}
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
           >
             {line3}
           </motion.p>

@@ -44,11 +44,18 @@ function Compétences() {
   const textAnimation = {
     initial: { opacity: 0, x: -200 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 1.5, ease: "backInOut" }
+    transition: { duration: 0.75, ease: "linear" } // Transition linéaire pour toutes les animations de texte
+  };
+
+  const buttonVariants = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5, ease: "linear" } // Transition linéaire pour toutes les animations de boutons
   };
 
   return (
-    <motion.div className="container-fluid" style={{ backgroundImage: `url(${SkillsBackground})`, backgroundSize: 'cover', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <motion.div className="container-fluid"
+      style={{ backgroundImage: `url(${SkillsBackground})`, backgroundSize: 'cover', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -68,7 +75,7 @@ function Compétences() {
                 style={{ cursor: 'pointer', border: 'none', background: 'white', padding: 0, width: '100%' }}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, type: "tween" }}
+                transition={buttonVariants.transition}
                 whileHover={{ scale: 1.05 }}
               >
                 <img src={comp.logo} className="img-fluid mr-3" alt={comp.nom} style={{ width: '100px', height: '100px', maxWidth: '100px', maxHeight: '100px' }} />
@@ -91,7 +98,7 @@ function Compétences() {
                 style={{ width: '100%', cursor: 'pointer', border: 'none', background: 'white', padding: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, type: "tween" }}
+                transition={{ duration: 0.5, ease: "linear" }} // Transition linéaire pour toutes les animations d'OS
                 whileHover={{ scale: 1.05 }}
               >
                 <img src={os.logo} className="card-img-top" alt={os.nom} style={{ width: '100px', height: '100px', maxWidth: '100px', maxHeight: '100px' }} />

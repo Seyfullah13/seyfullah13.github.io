@@ -23,14 +23,14 @@ function Contact() {
   const textAnimation = {
     initial: { opacity: 0, x: -200 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 1.5, ease: "easeInOut" }
+    transition: { duration: 0.5, ease: "linear" }
   };
 
-  const buttonHoverAnimation = {
-    whileHover: { scale: 1.1, x: -10 },
+  const buttonAnimation = {
+    whileHover: { scale: 1.1 },
     whileTap: { scale: 0.9 },
-    initial: { x: -200, opacity: 0 },
-    animate: { x: 0, opacity: 1, transition: { duration: 1.5, ease: "easeInOut" } }
+    initial: { opacity: 0, x: -200 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "linear" } }
   };
 
   return (
@@ -97,14 +97,14 @@ function Contact() {
                   <motion.button
                     type="submit"
                     className="btn btn-warning me-2"
-                    {...buttonHoverAnimation}
+                    {...buttonAnimation}
                   >
                     {t("button3")}
                   </motion.button>
                   <motion.button
                     type="reset"
                     className="btn btn-warning"
-                    {...buttonHoverAnimation}
+                    {...buttonAnimation}
                   >
                     {t("button4")}
                   </motion.button>
@@ -120,15 +120,16 @@ function Contact() {
             <p><strong>{t("contact")}</strong></p>
             <div className="d-flex justify-content-center align-items-center flex-column">
               <div className="mb-3">
-                <a
-                  href="https://fr.linkedin.com/in/seyfullah-ozdal2?original_referer=https%3A%2F%2Fwww.qwant.com%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="me-2"
-                  style={{ color: 'black' }}
-                >
-                  <FaLinkedin size={24} /> LinkedIn
-                </a>
+              <a
+  href="https://fr.linkedin.com/in/seyfullah-ozdal2"
+  target="_blank"
+  rel="noopener   noreferrer"
+  className="me-2"
+  style={{ color: 'black' }}
+>
+  <FaLinkedin size={24} /> LinkedIn
+</a>
+
                 <a
                   href="https://github.com/Seyfullah13"
                   target="_blank"

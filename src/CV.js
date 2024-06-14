@@ -16,39 +16,29 @@ function CV() {
   const CVImage = isEnglish ? CVImageEN : CVImageFR;
   const CVPDF = isEnglish ? CVPDFEN : CVPDFFR;
 
-  const backgroundStyle = {
-    backgroundImage: `url(${fondcv})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-  };
-
-  const buttonVariants = {
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 1, ease: 'backInOut' },
-    hover: { scale: 1.1, backgroundColor: '#ffc700', color: '#fff', transition: { duration: 0.3 } }
-  };
-
   return (
     <motion.div
       className="cv-container text-center"
-      style={backgroundStyle}
+      style={{
+        backgroundImage: `url(${fondcv})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+      }}
       id="CV"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
     >
       <motion.h1
         className="cv-title text-white"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: 'backInOut' }}
+        style={{ transition: 'opacity 1s ease-in-out' }}
       >
         {t("titre")}
       </motion.h1>
@@ -72,10 +62,8 @@ function CV() {
           textDecoration: 'none',
           color: '#000',
         }}
-        variants={buttonVariants}
-        initial="initial"
-        animate="animate"
-        whileHover="hover"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
       >
         {t("button1")}
       </motion.a>

@@ -6,17 +6,10 @@ import devImage from './images/dev.png';
 function Informations() {
   const { t } = useTranslation();
 
-  const textAnimation = {
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.75, ease: "easeInOut" }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
       style={{
         position: 'relative',
         minHeight: 'calc(100vh - 56px)',
@@ -24,9 +17,8 @@ function Informations() {
         textAlign: 'center',
         background: `url(${devImage}) no-repeat center center fixed`,
         backgroundSize: 'cover',
-        // Ajout d'une media query pour les tablettes
         '@media (min-width: 768px) and (max-width: 1024px)': {
-          backgroundSize: '150%' // Ajustement de la taille de l'image pour les tablettes
+          backgroundSize: '150%'
         }
       }}
       id='home'
@@ -43,7 +35,6 @@ function Informations() {
         <motion.p
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={textAnimation.transition}
           style={{ fontSize: '3em', marginBottom: '0.5em' }}
         >
           {t("greeting")}
@@ -51,7 +42,6 @@ function Informations() {
         <motion.p
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={textAnimation.transition}
           style={{ fontSize: '2em', marginTop: 0 }}
         >
           {t("profession")}
