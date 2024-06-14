@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.e285e857.css",
-    "main.js": "/static/js/main.00121674.js",
+    "main.js": "/static/js/main.67dcb16c.js",
     "static/media/Logo site .jpg": "/static/media/Logo site .6c2f8fa9545e08c94f07.jpg",
     "static/media/cvsofr.png": "/static/media/cvsofr.9a66cbfb8e1024c44304.png",
     "static/media/CVSOen.png": "/static/media/CVSOen.6fbfdb4ab4414aaba99c.png",
-    "static/media/justeprix.PNG": "/static/media/justeprix.8f7b6b7c4f57a28d5b78.PNG",
     "static/media/dev.png": "/static/media/dev.336b4cbea40caa025753.png",
     "static/media/CVSeyf.pdf.pdf": "/static/media/CVSeyf.pdf.3d23d04bd42bda8bb406.pdf",
     "static/media/CV English.pdf.pdf": "/static/media/CV English.pdf.b34fd1556190a0b96b87.pdf",
+    "static/media/Myuka.PNG": "/static/media/Myuka.e03d16a7b35cfc19a1cb.PNG",
+    "static/media/justeprix.PNG": "/static/media/justeprix.38d2097c41ad1c5db678.PNG",
     "static/media/Pendu.PNG": "/static/media/Pendu.9014829d795f12a723d2.PNG",
-    "static/media/Myuka.PNG": "/static/media/Myuka.51d2dbf221c52b8c8698.PNG",
     "static/media/Mastermind.PNG": "/static/media/Mastermind.6474bb8a689d5cc81959.PNG",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.e285e857.css.map": "/static/css/main.e285e857.css.map",
-    "main.00121674.js.map": "/static/js/main.00121674.js.map"
+    "main.67dcb16c.js.map": "/static/js/main.67dcb16c.js.map"
   },
   "entrypoints": [
     "static/css/main.e285e857.css",
-    "static/js/main.00121674.js"
+    "static/js/main.67dcb16c.js"
   ]
 }
