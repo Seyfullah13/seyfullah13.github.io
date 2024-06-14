@@ -1,18 +1,30 @@
+import { motion } from 'framer-motion';
 import React from 'react';
-import 'animate.css/animate.min.css'; // Import d'Animate.css
-import { useTranslation } from 'react-i18next'; 
-import styles from './index.css'; // Import du fichier de styles CSS
+import { useTranslation } from 'react-i18next';
+import styles from './index.css';
 
 function Footer() {
     const { t } = useTranslation();
 
+    const footerAnimation = {
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 1, type: 'spring', stiffness: 120 }
+    };
+
     return (
-        <footer className={`footer py-3 animate__animated animate__flipInX text-white ${styles.footer}`} style={{ backgroundColor: '#38605d' }}>
-            <div className="container text-center">
-                <span className="animate__animated animate__flipInX text-white">{t("copyrigths")}</span>
-                <span className="animate__animated animate__flipInX text-white"> {t("rights")}</span>
+        <motion.div
+            className={`footer py-3 text-white ${styles.footer}`}
+            style={{ backgroundColor: '#38605d', textAlign: 'center' }}
+            initial="initial"
+            animate="animate"
+            variants={footerAnimation}
+        >
+            <div className="container">
+                <motion.span className="text-white">{t("copyrigths")}</motion.span>
+                <motion.span className="text-white"> {t("rights")}</motion.span>
             </div>
-        </footer>
+        </motion.div>
     );
 }
 

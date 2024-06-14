@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
 import "animate.css/animate.min.css";
-import logo from "./images/Logo site .jpg";
-import LanguageSelector from "./components/language-selector";
+import React, { useState } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
+import { NavLink } from "react-router-dom";
+import LanguageSelector from "./components/language-selector";
+import logo from "./images/Logo site .jpg";
 
 function Header() {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ function Header() {
   };
 
   return (
-    <Navbar id="nav" expand="md" collapseOnSelect expanded={expanded} style={{ fontSize: "16px", borderBottom: "none", padding: "5px 20px" }}>
+    <Navbar  id="nav" expand="md" collapseOnSelect expanded={expanded} style={{ fontSize: "16px", borderBottom: "none", padding: "5px 20px" }}>
       <Container>
         <Navbar.Brand>
           <NavLink to="/" onClick={handleLinkClick}>
@@ -32,13 +32,13 @@ function Header() {
               alt="Logo"
               width="50"
               height="50"
-              className="d-inline-block align-top me-2 animate__animated animate__backInLeft"
+              className="d-inline-block align-top me-2 animate__animated animate__fadeInLeft" // Remplacement de animate__backInLeft
             />
           </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleMenu} style={{ backgroundColor: "transparent", border: "none" }} />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto animate__animated animate__backInLeft">
+          <Nav className="me-auto animate__animated animate__fadeInLeft"> {/* Remplacement de animate__backInLeft */}
             <Nav.Link as={NavLink} to="/profil" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
               {t("link1")}
             </Nav.Link>

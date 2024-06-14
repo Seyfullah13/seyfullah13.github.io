@@ -1,41 +1,41 @@
-import emailjs from '@emailjs/browser';
-import 'animate.css';
 import { motion } from 'framer-motion';
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
-import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
-import ContactBackground from './images/Contact.jpg';
 import { useTranslation } from 'react-i18next';
+import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
+import ContactBackground from './images/dev.png';
 
 function Contact() {
-  const{t} =useTranslation()
+  const { t } = useTranslation();
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_oa2dlp2', 'template_j8ib7sm', form.current, 'cX9kDL9nRV9ha0Krg')
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
-
-    e.target.reset();
+    // Simulating email sending
+    console.log('Sending email...');
+    setTimeout(() => {
+      console.log('Email sent successfully!');
+      e.target.reset();
+    }, 1000);
   };
 
-  const buttonHover = {
-    scale: 1.1,
-    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+  const textAnimation = {
+    initial: { opacity: 0, x: -200 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 1.5, ease: "easeInOut" }
+  };
+
+  const buttonHoverAnimation = {
+    whileHover: { scale: 1.1, x: -10 },
+    whileTap: { scale: 0.9 },
+    initial: { x: -200, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 1.5, ease: "easeInOut" } }
   };
 
   return (
     <div
-      className="container-fluid animate__animated animate__bounceIn"
+      className="container-fluid"
       style={{
         backgroundImage: `url(${ContactBackground})`,
         backgroundSize: 'cover',
@@ -44,24 +44,24 @@ function Contact() {
         padding: '20px',
       }}
     >
-      <div className="row justify-content-center align-items-center">
-        <div className="col-12">
-          <div className="text-center animate__animated animate__headShake">
-            <h1 id="Contact" style={{ color: 'black', marginBottom: '20px' }}>Contact</h1>
-          </div>
-          <div className="text-center">
+      <motion.div className="row justify-content-center align-items-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+        <div className="col-12 col-md-8 col-lg-6">
+          <motion.div className="text-center" {...textAnimation}>
+            <h1 id="Contact" style={{ color: 'white', marginBottom: '20px' }}>Contact</h1>
+          </motion.div>
+          <motion.div className="text-center" {...textAnimation}>
             <Form
               ref={form}
               onSubmit={sendEmail}
-              style={{ padding: '40px', borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
+              style={{ padding: '20px', borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
             >
               <div className="row mb-3">
-                <div className="col-4 offset-2 col-md-2 offset-md-4">
+                <div className="col-12 col-md-6 mb-2 mb-md-0">
                   <Form.Group controlId="firstName">
                     <Form.Control type="text" name="firstName" placeholder={t("surname")} />
                   </Form.Group>
                 </div>
-                <div className="col-4 col-md-2">
+                <div className="col-12 col-md-6">
                   <Form.Group controlId="lastName">
                     <Form.Control type="text" name="lastName" placeholder={t("name")} />
                   </Form.Group>
@@ -69,7 +69,7 @@ function Contact() {
               </div>
 
               <div className="row mb-3">
-                <div className="col-8 offset-2 col-md-4 offset-md-4">
+                <div className="col-12">
                   <Form.Group controlId="email">
                     <Form.Control type="email" name="email" placeholder={t("mail")} />
                   </Form.Group>
@@ -77,51 +77,51 @@ function Contact() {
               </div>
 
               <div className="row mb-3">
-                <div className="col-8 offset-2 col-md-4 offset-md-4">
+                <div className="col-12">
                   <Form.Group controlId="subject">
-                    <Form.Control type="text" name="subject" placeholder={t("object")}  />
+                    <Form.Control type="text" name="subject" placeholder={t("object")} />
                   </Form.Group>
                 </div>
               </div>
 
               <div className="row mb-3">
-                <div className="col-8 offset-2 col-md-4 offset-md-4">
+                <div className="col-12">
                   <Form.Group controlId="message">
-                    <Form.Control as="textarea" rows={4} name="message" placeholder={t("message")} />
+                    <Form.Control as="textarea" rows={6} name="message" placeholder={t("message")} />
                   </Form.Group>
                 </div>
               </div>
 
               <div className="row">
-                <div className="col-8 offset-2 col-md-4 offset-md-4 text-center">
+                <div className="col-12 text-center">
                   <motion.button
                     type="submit"
                     className="btn btn-warning me-2"
-                    whileHover={buttonHover}
+                    {...buttonHoverAnimation}
                   >
-                   {t("button3")}
+                    {t("button3")}
                   </motion.button>
                   <motion.button
                     type="reset"
                     className="btn btn-warning"
-                    whileHover={buttonHover}
+                    {...buttonHoverAnimation}
                   >
                     {t("button4")}
                   </motion.button>
                 </div>
               </div>
             </Form>
-          </div>
+          </motion.div>
         </div>
-      </div>
-      <div className="row justify-content-center align-items-center mt-3">
+      </motion.div>
+      <motion.div className="row justify-content-center align-items-center mt-3" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
         <div className="col-md-6">
-          <div className="text-center">
-            <p><strong>   {t("contact")}</strong></p>
+          <motion.div className="text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }} {...textAnimation}>
+            <p><strong>{t("contact")}</strong></p>
             <div className="d-flex justify-content-center align-items-center flex-column">
               <div className="mb-3">
                 <a
-                  href="https://www.linkedin.com/in/seyfullah13"
+                  href="https://fr.linkedin.com/in/seyfullah-ozdal2?original_referer=https%3A%2F%2Fwww.qwant.com%2F"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="me-2"
@@ -139,12 +139,12 @@ function Contact() {
                 </a>
               </div>
               <div>
-                <p><strong><FaPhone size={24} /> <a href="tel:+33698674726" style={{ color: 'black' }}>+33 6 98 67 47 26</a></strong></p>
+                <p><strong><FaPhone size={24} /> <a href="tel:+33698674726" style={{ color: 'black' }}>{t("phone")}</a></strong></p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

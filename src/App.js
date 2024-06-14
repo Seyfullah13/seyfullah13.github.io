@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Scrollbar from 'smooth-scrollbar';
 import Cv from "./CV";
 import Competences from "./Compétences";
 import Contact from "./Contact";
@@ -9,13 +10,24 @@ import Header from "./Header";
 import Informations from "./Informations";
 import Portfolio from "./Portfolio";
 import Profil from "./Profil";
+import './index.css';
 
 function App() {
+  useEffect(() => {
+    Scrollbar.init(document.querySelector('#my-scrollbar'), {
+      damping: 0.1,
+      thumbMinSize: 20,
+      renderByPixels: true,
+      alwaysShowTracks: false,
+      continuousScrolling: true,
+    });
+  }, []);
+
   return (
     <Router>
       <div className="background-container">
         <Header />
-        <div className="content-container">
+        <div id="my-scrollbar" className="scrollbar-container content-container">
           <main>
             <Routes>
               <Route path="/" element={<Informations />} />
@@ -26,12 +38,11 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </Router>
   );
 }
 
 export default App;
-

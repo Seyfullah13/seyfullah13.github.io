@@ -18,6 +18,9 @@ code {
   background-color: #38605d;
   z-index: 1;
   width: 100%;
+  position: -webkit-sticky; /* Pour Safari sur iOS < 13 */
+  position: sticky; /* Pour les navigateurs modernes */
+  top: 0;
 }
 
 /* CV styles */
@@ -26,7 +29,7 @@ code {
 }
 
 .cv-title {
-  font-size: 24px;
+  font-size: 1.5rem; /* Ajustement de la taille de la police */
   margin-bottom: 20px;
 }
 
@@ -37,12 +40,14 @@ code {
 .cv-image {
   display: block;
   margin: 0 auto;
+  max-width: 100%; /* Ajustement pour que l'image soit responsive */
+  height: auto;
 }
 
 .cv-button {
   display: block;
   margin: 0 auto;
-  width: 200px; /* Adjust button width as needed */
+  width: 200px; /* Ajustement de la largeur du bouton si nécessaire */
 }
 
 /* Progress bar custom style */
@@ -82,19 +87,14 @@ code {
 .cv-compétences-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between components if necessary */
+  gap: 20px; /* Ajustement de l'écart entre les éléments si nécessaire */
   justify-content: center;
   padding: 20px;
 }
 
 .cv-compétences-container > div {
-  flex: 1 1 300px; /* Adjust the basis as needed for responsiveness */
-  max-width: 600px; /* Ensure the components don't grow too large */
-}
-
-/* Container padding */
-.container {
-  padding: 20px;
+  flex: 1 1 300px; /* Ajustement de la base selon les besoins pour la réactivité */
+  max-width: 600px; /* Ajustement pour s'assurer que les composants ne deviennent pas trop grands */
 }
 
 /* Global card styles */
@@ -150,21 +150,23 @@ code {
   /* Ajoutez ici les styles spécifiques à la carte du Mastermind */
   height: 200px; /* Par exemple, définissez la hauteur de la carte */
 }
+
 .links {
   background-color: white;
 }
+
 #profil {
   width: 100vw;
-  min-height: 100vh; /* Utilisation de min-height pour garantir que le conteneur a au moins la taille de l'écran */
+  min-height: 100vh;
   margin: auto;
   padding: 20px;
   background-size: cover;
   background-position: center;
   color: black;
   text-align: center;
-  display: flex; /* Utilisation de flexbox pour organiser les éléments */
-  flex-direction: column; /* Empiler les éléments les uns sur les autres */
-  justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #profil-content {
@@ -174,16 +176,57 @@ code {
   padding: 20px;
   border-radius: 10px;
 }
+
 .nav-link {
-  color: black !important;
+  color: orange !important;
 }
+
 .card-alt {
   background-color: white;
 }
 
 /* Footer.module.css */
 footer {
-  width: 100%; /* Utilisation de la largeur totale */
-  background-color: #ccc; /* Couleur de fond pour le pied de page */
-  padding: 10px 0; /* Espacement intérieur du pied de page */
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Assurez-vous que le footer est au-dessus du contenu */
+}
+..scrollbar-container {
+  height: calc(
+    90vh - 20px
+  ); /* Hauteur ajustée pour la scrollbar, moins le padding */
+  overflow-y: auto; /* Permettre le défilement vertical */
+  padding-right: 10px; /* Ajout de padding à droite */
+  padding-bottom: 10px; /* Ajout de padding en bas */
+}
+
+.scrollbar-container::-webkit-scrollbar {
+  width: 5px; /* Largeur réduite de la scrollbar */
+  background: transparent; /* Couleur de fond transparente pour la track */
+}
+
+.scrollbar-container::-webkit-scrollbar-thumb {
+  background-color: #38605d; /* Couleur du thumb (la partie mobile de la scrollbar) */
+  border-radius: 4px; /* Border-radius du thumb */
+}
+
+.scrollbar-container::-webkit-scrollbar-track {
+  background: none; /* Retire complètement la couleur de fond de la track (la partie fixe de la scrollbar) */
+}
+@media (max-width: 768px) {
+  .cv-image {
+    width: 100%; /* Adapter la largeur à 100% pour les écrans plus petits */
+    max-width: none; /* Supprimer la limitation de la largeur maximale */
+  }
+}
+@media (max-width: 576px) {
+  .cv-image {
+    width: 95%; /* Augmenter la largeur de l'image pour remplir la largeur de l'écran */
+    max-width: none; /* Supprimer la limitation de la largeur maximale */
+    margin-top: 10px; /* Augmenter la marge supérieure pour l'espace */
+  }
 }

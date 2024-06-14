@@ -1,9 +1,8 @@
-import 'animate.css/animate.min.css';
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import PortfolioBackground from './images/Portfolio.jpg';
+import PortfolioBackground from './images/dev.png';
 
 // Importer les images de projet
 import image9 from './images/Mastermind.PNG';
@@ -92,7 +91,7 @@ function Portfolio() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 1.0,
       },
     });
   }, [controls]);
@@ -100,8 +99,8 @@ function Portfolio() {
   const backgroundStyle = {
     backgroundImage: `url(${PortfolioBackground})`,
     backgroundSize: 'cover',
+    backgroundPosition: 'center', // Centre l'image de fond
     padding: '20px',
-    borderRadius: '10px',
     minHeight: '100vh', // Réglage de la hauteur pour couvrir toute la page
   };
 
@@ -112,15 +111,26 @@ function Portfolio() {
     marginBottom: '20px',
   };
 
+  const projectAnimation = {
+    initial: { opacity: 0, x: -200 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.50, ease: "backInOut" }
+  };
+
   return (
     <motion.div style={backgroundStyle} initial={{ opacity: 0, y: -100 }} animate={controls}>
       <Container fluid>
-        <motion.div style={overlayStyle} className="animate__animated animate__backInLeft">
+        <motion.div
+          style={overlayStyle}
+          initial={{ opacity: 0, x: -200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.50, ease: "backInOut" }}
+        >
           <h1 className="text-center mb-5" id='portfolio'>{t("title1")}</h1>
           <h2>{t("subtitle")}</h2>
         </motion.div>
         <Tab.Container activeKey={activeTab} onSelect={handleTabChange}>
-          <Row>
+          <Row className="justify-content-center">
             <Col>
               <Nav variant="tabs" className="justify-content-center">
                 <Nav.Item>
@@ -139,7 +149,7 @@ function Portfolio() {
             {filteredProjects.map((project) => (
               <Col key={project.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="animate__animated animate__swing">
+                  <motion.div {...projectAnimation}>
                     <Card className="h-100">
                       <Card.Img variant="top" src={project.imageSrc} alt={project.altText} style={{ objectFit: 'cover', height: '200px' }} />
                       <Card.Body>
