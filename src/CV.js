@@ -64,6 +64,11 @@ function CV() {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        whileHover={{
+          scale: 1.1,
+          backgroundColor: '#e6b800',
+          color: '#fff',
+        }}
       >
         {t("button1")}
       </motion.a>
