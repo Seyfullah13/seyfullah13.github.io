@@ -97,6 +97,13 @@ function Portfolio() {
     });
   }, [controls]);
 
+  // Animation pour chaque projet
+  const projectAnimation = {
+    initial: { opacity: 0, scale: 0.9 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.3, ease: "easeInOut" } // Transition plus douce et plus courte
+  };
+
   // Styles CSS pour le fond et l'overlay
   const backgroundStyle = {
     backgroundImage: `url(${PortfolioBackground})`,
@@ -113,21 +120,14 @@ function Portfolio() {
     marginBottom: '20px',
   };
 
-  // Animation pour chaque projet
-  const projectAnimation = {
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5, ease: "linear" } // Transition linéaire pour les animations de projet
-  };
-
   return (
     <motion.div style={backgroundStyle} initial={{ opacity: 0, y: -100 }} animate={controls}>
       <Container fluid>
         <motion.div
           style={overlayStyle}
-          initial={{ opacity: 0, x: -200 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "linear" }} // Transition linéaire pour l'overlay
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }} // Transition plus douce pour l'overlay
         >
           <h1 className="text-center mb-5" id='portfolio'>{t("title1")}</h1>
           <h2>{t("subtitle")}</h2>
@@ -152,20 +152,18 @@ function Portfolio() {
             {filteredProjects.map((project) => (
               <Col key={project.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                  <motion.div {...projectAnimation}>
+                  <motion.div whileHover={{ scale: 1.05 }} {...projectAnimation}>
                     <Card className="h-100">
-                    <Card.Img
-  variant="top"
-  src={project.imageSrc}
-  alt={project.altText}
-  style={{
-    objectFit: 'contain', // Pour s'assurer que l'image est entièrement visible sans être coupée
-    height: 'auto',       // Hauteur automatique pour maintenir les proportions
-    maxWidth: '100%',     // Largeur maximale de l'image
-    maxHeight: '200px',   // Hauteur maximale souhaitée pour éviter les images trop grandes
-  }}
-/>
-
+                      <Card.Img
+                        variant="top"
+                        src={project.imageSrc}
+                        alt={project.altText}
+                        style={{
+                          objectFit: 'cover',
+                          height: '200px',
+                          maxWidth: '100%',
+                        }}
+                      />
                       <Card.Body>
                         <Card.Title>{getProjectTitle(project, t)}</Card.Title>
                         <div className="tags mb-2">
