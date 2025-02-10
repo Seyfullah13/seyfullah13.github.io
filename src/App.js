@@ -2,14 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Scrollbar from 'smooth-scrollbar';
-import Cv from "./CV";
 import Competences from "./Compétences";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Header from "./Header";
 import Informations from "./Informations";
 import Portfolio from "./Portfolio";
-import Profil from "./Profil";
+
 import './index.css';
 
 function App() {
@@ -31,8 +30,6 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Informations />} />
-              <Route path="/profil" element={<Profil />} />
-              <Route path="/cv" element={<Cv />} />
               <Route path="/competences" element={<Competences />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />

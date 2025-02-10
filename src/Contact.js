@@ -139,9 +139,7 @@ function Contact() {
                   <FaGithub size={24} /> GitHub
                 </a>
               </div>
-              <div>
-                <p><strong><FaPhone size={24} /> <a href="tel:+33698674726" style={{ color: 'black' }}>{t("phone")}</a></strong></p>
-              </div>
+           
             </div>
           </motion.div>
         </div>

@@ -1,10 +1,8 @@
 {
   "greeting": "Hello, I am Seyfullah Ozdal",
   "profession": "Junior web developer",
-  "link1": "Profile",
-  "link2": "CV",
-  "link3": " Technical Skills",
-  "link4": "Portfolio",
+  "link3": " Programming languages",
+  "link4": "Projects",
   "link5": "Contact",
   "description": {
     "line1": "I am looking for an internship from August 19th to October 25th 2024.",

@@ -39,12 +39,8 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleMenu} style={{ backgroundColor: "transparent", border: "none" }} />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto animate__animated animate__fadeInLeft"> {/* Remplacement de animate__backInLeft */}
-            <Nav.Link as={NavLink} to="/profil" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
-              {t("link1")}
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/cv" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
-              {t("link2")}
-            </Nav.Link>
+          
+            
             <Nav.Link as={NavLink} to="/competences" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
               {t("link3")}
             </Nav.Link>

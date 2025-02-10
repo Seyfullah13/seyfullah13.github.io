@@ -1,10 +1,8 @@
 {
   "greeting": "Bonjour, je suis Seyfullah Ozdal",
   "profession": "Développeur web junior",
-  "link1": "Profil",
-  "link2": "CV",
-  "link3": "Compétences techniques",
-  "link4": "Portfolio",
+  "link3": "Languages de programmation",
+  "link4": "Réalisations",
   "link5": "Contact",
   "description": {
     "line1": "Je recherche un stage du 19 août au 25 octobre 2024.",
