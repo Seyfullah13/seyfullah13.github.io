@@ -1,5 +1,5 @@
 {
-  "greeting": "Hello, I am Seyfullah Ozdal",
+  "greeting": "Seyfullah Ozdal",
   "profession": "Junior web developer",
   "link3": " Programming languages",
   "link4": "Projects",
@@ -27,6 +27,5 @@
   "copyrigths": "© 2024 My Portfolio",
   "rights": "All rights reserved",
   "skills": "Programming Languages",
-  "operatingSystems": "Operating Systems",
-  "phone": "Phone"
+  "operatingSystems": "Operating Systems"
 }

@@ -2,7 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import PortfolioBackground from './images/dev.png';
+import PortfolioBackground from './images/tech.png';
 import './index.css'; // Assurez-vous d'importer votre fichier CSS
 
 // Importez les images de projet

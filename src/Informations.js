@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import devImage from './images/dev.png';
+import devImage from './images/tech.png';
 
 function Informations() {
   const { t } = useTranslation();

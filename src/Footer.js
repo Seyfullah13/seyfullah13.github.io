@@ -15,7 +15,7 @@ function Footer() {
     return (
         <motion.div
             className={`footer py-3 text-white ${styles.footer}`}
-            style={{ backgroundColor: '#38605d', textAlign: 'center' }}
+            style={{ backgroundColor: '#1e3a8a', textAlign: 'center' }}
             initial="initial"
             animate="animate"
             variants={footerAnimation}

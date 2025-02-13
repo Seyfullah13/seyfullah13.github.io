@@ -1,10 +1,10 @@
-import "animate.css/animate.min.css";
+
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
 import LanguageSelector from "./components/language-selector";
-import logo from "./images/Logo site .jpg";
+import logo from "./images/logo site.png";
 
 function Header() {
   const { t } = useTranslation();
@@ -32,22 +32,22 @@ function Header() {
               alt="Logo"
               width="50"
               height="50"
-              className="d-inline-block align-top me-2 animate__animated animate__fadeInLeft" // Remplacement de animate__backInLeft
+              className="d-inline-block align-top me-2 " 
             />
           </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleMenu} style={{ backgroundColor: "transparent", border: "none" }} />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto animate__animated animate__fadeInLeft"> {/* Remplacement de animate__backInLeft */}
+          <Nav className="me-auto "> 
           
             
-            <Nav.Link as={NavLink} to="/competences" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
+            <Nav.Link as={NavLink} to="/competences" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
               {t("link3")}
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/portfolio" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
+            <Nav.Link as={NavLink} to="/portfolio" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
               {t("link4")}
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact" className="mx-3 nav-link text-white" onClick={handleLinkClick}>
+            <Nav.Link as={NavLink} to="/contact" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
               {t("link5")}
             </Nav.Link>
           </Nav>

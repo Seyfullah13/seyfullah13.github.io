@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
-import ContactBackground from './images/dev.png';
+import ContactBackground from './images/tech.png';
 
 function Contact() {
   const { t } = useTranslation();

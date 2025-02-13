@@ -7,7 +7,7 @@ import bootstrapLogo from './images/Bootstrap.png';
 import jsLogo from './images/JS.png';
 import nodeLogo from './images/Node js.png';
 import windowsLogo from './images/Windows.png';
-import SkillsBackground from './images/dev.png';
+import SkillsBackground from './images/tech.png';
 import cssLogo from './images/logo css.png';
 import htmlLogo from './images/logo html.jpg';
 import mysqlLogo from './images/logo mySQL.webp';
