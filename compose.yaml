@@ -1,0 +1,10 @@
+services:
+  react_app:
+    build: .
+    image: react-app-npm
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/usr/src/app:delegated"
+      - "/usr/src/app/node_modules"
