@@ -1,10 +1,7 @@
 {
-  "greeting": "Hello, I am Seyfullah Ozdal",
-  "profession": "Junior web developer",
-  "link1": "Profile",
-  "link2": "CV",
-  "link3": " Technical Skills",
-  "link4": "Portfolio",
+
+  "link3": " Programming languages",
+  "link4": "Projects",
   "link5": "Contact",
   "description": {
     "line1": "I am looking for an internship from August 19th to October 25th 2024.",
@@ -13,8 +10,8 @@
   },
   "titre": "My CV",
   "button1": "Download CV",
-  "title1": "My Portfolio",
-  "subtitle": "Below are a few examples of projects completed during the training",
+  "title1": "Projects",
+  "subtitle": "Below are a few examples of projects completed during my training course",
   "button2": "All",
   "project1": "Just Price",
   "project2": "Hangman",
@@ -28,7 +25,6 @@
   "contact": "You can also contact me via:",
   "copyrigths": "© 2024 My Portfolio",
   "rights": "All rights reserved",
-  "skills": "Technical Skills",
-  "operatingSystems": "Operating Systems",
-  "phone": "Phone"
+  "skills": "Programming Languages",
+  "operatingSystems": "Operating Systems"
 }

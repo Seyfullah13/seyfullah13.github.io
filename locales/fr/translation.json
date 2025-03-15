@@ -1,10 +1,7 @@
 {
-  "greeting": "Bonjour, je suis Seyfullah Ozdal",
-  "profession": "Développeur web junior",
-  "link1": "Profil",
-  "link2": "CV",
-  "link3": "Compétences techniques",
-  "link4": "Portfolio",
+ 
+  "link3": "Languages de programmation",
+  "link4": "Projets",
   "link5": "Contact",
   "description": {
     "line1": "Je recherche un stage du 19 août au 25 octobre 2024.",
@@ -13,8 +10,8 @@
   },
   "titre": "Mon CV",
   "button1": "Télécharger le CV",
-  "title1": "Mon Portfolio",
-  "subtitle": "Ci-dessous quelques exemples de réalisations réalisées durant la formation",
+  "title1": "Projets",
+  "subtitle": "Ci-dessous quelques exemples de projets réalisées durant mon parcours",
   "button2": "Tous",
   "project1": "Juste prix",
   "project2": "Pendu",
@@ -28,7 +25,6 @@
   "contact": "Vous pouvez également me contacter via:",
   "copyrigths": "© 2024 Mon Portfolio",
   "rights": "Tout droits réservés",
-  "skills": "Compétences techniques",
-  "operatingSystems": "Système d'exploitation",
-  "phone": "Téléphone"
+  "skills": "Languages de programmation",
+  "operatingSystems": "Système d'exploitation"
 }
