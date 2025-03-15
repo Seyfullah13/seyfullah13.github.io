@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ContactBackground from './images/tech.png';
 
 function Contact() {
