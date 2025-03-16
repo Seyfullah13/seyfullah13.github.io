@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Scrollbar from 'smooth-scrollbar';
-import Competences from "./Compétences";
+import LangagesdeProgrammation from './Langages de programmation';
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -32,7 +32,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Avatar />} />
-              <Route path="/competences" element={<Competences />} />
+              <Route path="/Langages de Programmation" element={<LangagesdeProgrammation />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

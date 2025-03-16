@@ -14,7 +14,7 @@ import mysqlLogo from './images/logo mySQL.webp';
 import phpLogo from './images/logo php.webp';
 import reactLogo from './images/react.png';
 
-function Compétences() {
+function LangageDeProgrammation() {
   const { t } = useTranslation();
   
   const frontEndSkills = [
@@ -172,4 +172,4 @@ function Compétences() {
   );
 }
 
-export default Compétences;
+export default LangageDeProgrammation;
