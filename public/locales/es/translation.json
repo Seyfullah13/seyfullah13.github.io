@@ -1,0 +1,30 @@
+{
+    "link3": "Lenguajes de programación",
+    "link4": "Proyectos",
+    "link5": "Contacto",
+    "description": {
+      "line1": "Busco unas prácticas desde el 19 de agosto hasta el 25 de octubre de 2024.",
+      "line2": "Mis estudios me han permitido desarrollar habilidades en organización, gestión de proyectos y trabajo en equipo, y estoy convencido de poder aportar un valor añadido a su equipo.",
+      "line3": "Gracias a mi formación como Desarrollador Web y Web Móvil en AFPA de Beaumont (63), soy capaz de diseñar, desarrollar y mantener aplicaciones web de calidad utilizando las últimas tecnologías."
+    },
+    "titre": "Mi CV",
+    "button1": "Descargar CV",
+    "title1": "Proyectos",
+    "subtitle": "A continuación, algunos ejemplos de proyectos realizados durante mi trayectoria",
+    "button2": "Todos",
+    "project1": "Precio justo",
+    "project2": "Ahorcado",
+    "surname": "Apellido",
+    "name": "Nombre",
+    "mail": "Correo electrónico",
+    "object": "Asunto",
+    "message": "Tu mensaje",
+    "button3": "Enviar",
+    "button4": "Cancelar",
+    "contact": "También puedes contactarme a través de:",
+    "copyrigths": "© 2024 Mi Portafolio",
+    "rights": "Todos los derechos reservados",
+    "skills": "Lenguajes de programación",
+    "operatingSystems": "Sistema operativo"
+  }
+  
