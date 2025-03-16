@@ -1,87 +1,89 @@
-import React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
-import { Dropdown } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
-import 'animate.css/animate.min.css';
-import enFlag from '../images/UK.png'; // Import English flag
-import frFlag from '../images/drapeaufrance.jpg'; // Import French flag
+import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import GlobeIcon from "../images/globe 1.png";
 
-function LanguageSelector({ onLanguageChange }) {
+const LanguageSelector = ({ onLanguageChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  const languages = [
+    { code: "en", label: "English" },
+    { code: "fr", label: "Français" },
+    { code: "es", label: "Español" },
+    { code: "ar", label: "العربية" },
+    { code: "tr", label: "Türkçe" },
+    { code: "it", label: "Italiano" },
+  ];
+
   const { i18n } = useTranslation();
-
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    // Appeler la fonction onLanguageChange avec la nouvelle langue
     if (onLanguageChange) {
       onLanguageChange();
     }
-  };
-
-  const getCurrentFlag = () => {
-    switch (i18n.language) {
-      case 'en':
-        return enFlag;
-      case 'fr':
-        return frFlag;
-      default:
-        return enFlag;
-    }
+    setIsOpen(false);
   };
 
   return (
-    <Dropdown className="mx-3">
-      <Dropdown.Toggle
-        className="animate__animated animate__backInLeft"
-        style={{
-          background: 'transparent',
-          border: 'none',
-          color: 'white',
-          display: 'flex',
-          alignItems: 'center'
-        }}
+    <div ref={containerRef} style={{ position: "relative", display: "inline-block" }}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+        aria-label="Sélecteur de langue"
       >
-        <img 
-          src={getCurrentFlag()} 
-          alt={i18n.language} 
-          width="20" 
-          height="15" 
-          style={{ marginRight: '8px' }} // Explicit margin
+        <img
+          src={GlobeIcon}
+          alt="Sélecteur de langue"
+          style={{ display: "block" }}
         />
-        {i18n.language.toUpperCase()}
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item onClick={() => changeLanguage('en')}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img 
-              src={enFlag} 
-              alt="English" 
-              width="20" 
-              height="15" 
-              style={{ marginRight: '8px' }} // Explicit margin
-            />
-            <span>EN</span>
-          </div>
-        </Dropdown.Item>
-        <Dropdown.Item onClick={() => changeLanguage('fr')}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img 
-              src={frFlag} 
-              alt="French" 
-              width="20" 
-              height="15" 
-              style={{ marginRight: '8px' }} // Explicit margin
-            />
-            <span>FR</span>
-          </div>
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+      </button>
+      {isOpen && (
+        <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            left: 0,
+            background: "#333",
+            padding: "10px",
+            borderRadius: "5px",
+            zIndex: 1000,
+          }}
+        >
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => changeLanguage(lang.code)}
+              style={{ color: "white", cursor: "pointer", padding: "5px 0", background: "none", border: "none" }}
+              aria-label={`Change language to ${lang.label}`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
-}
+};
 
-// Définir la validation de la prop onLanguageChange
 LanguageSelector.propTypes = {
-  onLanguageChange: PropTypes.func.isRequired,
+  onLanguageChange: PropTypes.func,
 };
 
 export default LanguageSelector;
