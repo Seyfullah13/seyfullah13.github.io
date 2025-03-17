@@ -49,12 +49,12 @@ const AvatarCustom = ({ children, ...props }) => {
 
           {/* Colonne de l'encadré de présentation */}
           <div className="col-md-6">
-            <div className="card shadow-lg border-0">
+            <div className="card shadow-lg border-0" id="card">
               <div className="card-body">
-                <h5 className="card-title text-primary font-weight-bold" style={{ fontSize: "1.5rem" }}>
+                <h5 className="card-title text-white font-weight-bold" style={{ fontSize: "1.5rem" }}>
                   {t("prénom-métier")}
                 </h5>
-                <p className="card-text" style={{ fontSize: "1rem", color: "#555" }}>
+                <p className="card-text" style={{ fontSize: "1rem", color: " #FFFFFF" }}>
                   {t("présentation")}
                 </p>
               </div>
