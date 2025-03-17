@@ -1,21 +1,20 @@
 {
-
-  "link3": " Programming languages",
+  "link3": "Programming Languages",
   "link4": "Projects",
   "link5": "Contact",
   "description": {
-    "line1": "I am looking for an internship from August 19th to October 25th 2024.",
-    "line2": "My studies have allowed me to develop skills in organization, project management, and teamwork, and I am convinced that I can bring added value to your team.",
-    "line3": "Thanks to my training as a Web and Mobile Web Developer at AFPA de Beaumont (63), I am capable of designing, developing, and maintaining high-quality web applications using the latest technologies."
+      "line1": "I am looking for an internship from August 19 to October 25, 2024.",
+      "line2": "My studies have allowed me to develop skills in organization, project management, and teamwork, and I am confident that I can bring value to your team.",
+      "line3": "Through my training as a Web and Web Mobile Developer at AFPA Beaumont (63), I am capable of designing, developing, and maintaining high-quality web applications using the latest technologies."
   },
   "titre": "My CV",
   "button1": "Download CV",
   "title1": "Projects",
-  "subtitle": "Below are a few examples of projects completed during my training course",
+  "subtitle": "Below are some examples of projects completed during my journey",
   "button2": "All",
   "project1": "Just Price",
   "project2": "Hangman",
-  "surname": "Last Name",
+  "surname": "Surname",
   "name": "First Name",
   "mail": "E-mail",
   "object": "Subject",
@@ -26,5 +25,7 @@
   "copyrigths": "© 2024 My Portfolio",
   "rights": "All rights reserved",
   "skills": "Programming Languages",
-  "operatingSystems": "Operating Systems"
+  "operatingSystems": "Operating Systems",
+  "prénom-métier": "Ozdal Seyfullah Junior Web Developer",
+  "présentation": "Passionate about web development, I am currently in training and learning technologies such as HTML, CSS, SCSS, JavaScript, React, PHP, and Symfony. I am developing skills in creating efficient, user-focused web solutions with an emphasis on security, maintainability, and performance.\n\nMotivated and constantly staying up to date, I am capable of working independently or within a team, applying Agile/Scrum methodologies.\n\n🚀 Key skills:\n\n    Front-end: HTML, CSS, SCSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Databases: MySQL\n    Deployment: Netlify, Render, Vercel\n    Version Control: Git, GitHub"
 }
