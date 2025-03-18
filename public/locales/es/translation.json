@@ -3,17 +3,17 @@
   "link4": "Proyectos",
   "link5": "Contacto",
   "description": {
-      "line1": "Estoy buscando una pasantía del 19 de agosto al 25 de octubre de 2024.",
-      "line2": "Mis estudios me han permitido desarrollar habilidades en organización, gestión de proyectos y trabajo en equipo, y estoy convencido de poder aportar valor a su equipo.",
-      "line3": "Gracias a mi formación como Desarrollador Web y Web Mobile en la AFPA de Beaumont (63), soy capaz de diseñar, desarrollar y mantener aplicaciones web de alta calidad utilizando las últimas tecnologías."
+    "line1": "Estoy buscando una pasantía del 19 de agosto al 25 de octubre de 2024.",
+    "line2": "Mis estudios me han permitido desarrollar habilidades en organización, gestión de proyectos y trabajo en equipo, y estoy convencido de que puedo aportar valor a su equipo.",
+    "line3": "Gracias a mi formación en Desarrollo Web y Web Móvil en AFPA Beaumont (63), soy capaz de diseñar, desarrollar y mantener aplicaciones web de alta calidad utilizando las últimas tecnologías."
   },
   "titre": "Mi CV",
-  "button1": "Descargar el CV",
+  "button1": "Descargar CV",
   "title1": "Proyectos",
   "subtitle": "A continuación, algunos ejemplos de proyectos realizados durante mi trayectoria",
   "button2": "Todos",
-  "project1": "Precio justo",
-  "project2": "Ahorcado",
+  "project1": "Juste prix",
+  "project2": "Pendu",
   "surname": "Apellido",
   "name": "Nombre",
   "mail": "Correo electrónico",
@@ -22,10 +22,11 @@
   "button3": "Enviar",
   "button4": "Cancelar",
   "contact": "También puedes contactarme a través de:",
-  "copyrigths": "© 2024 Mi Portfolio",
+  "copyrigths": "© 2024 Mi Portafolio",
   "rights": "Todos los derechos reservados",
   "skills": "Lenguajes de programación",
   "operatingSystems": "Sistemas operativos",
-  "prénom-métier": "Ozdal Seyfullah Desarrollador web Junior",
-  "présentation": "Apasionado por el desarrollo web, actualmente estoy en formación y me estoy capacitando en tecnologías como HTML, CSS, SCSS, JavaScript, React, PHP y Symfony. Estoy desarrollando habilidades en la creación de soluciones web de alto rendimiento y adaptadas a los usuarios, con énfasis en seguridad, mantenibilidad y rendimiento.\n\nMotivado y siempre al día, soy capaz de trabajar de manera autónoma o en equipo, aplicando metodologías Agile/Scrum.\n\n🚀 Competencias clave:\n\n    Frontend y Backend"
+  "prénom-métier": "Ozdal Seyfullah Desarrollador Web Junior",
+  "présentation": "Apasionado por el desarrollo web, actualmente estoy en formación y trabajando con tecnologías como HTML, CSS, SCSS, JavaScript, React, PHP y Symfony. Estoy desarrollando habilidades para crear soluciones web de alto rendimiento y fáciles de usar, enfocándome en seguridad, mantenibilidad y rendimiento.\n\nMotivado y en constante aprendizaje, puedo trabajar de forma independiente o en equipo aplicando metodologías Agile/Scrum.\n\n🚀 Habilidades clave:\n\n    Front-end: HTML, CSS, SCSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Bases de datos: MySQL\n    Despliegue: Netlify, Render, Vercel\n    Control de versiones: Git, GitHub",
+  "titreaccueil": "Portfolio Profesional de Seyfullah Ozdal"
 }
