@@ -3,18 +3,18 @@
   "link4": "Projects",
   "link5": "Contact",
   "description": {
-      "line1": "I am looking for an internship from August 19 to October 25, 2024.",
-      "line2": "My studies have allowed me to develop skills in organization, project management, and teamwork, and I am confident that I can bring value to your team.",
-      "line3": "Through my training as a Web and Web Mobile Developer at AFPA Beaumont (63), I am capable of designing, developing, and maintaining high-quality web applications using the latest technologies."
+    "line1": "I am looking for an internship from August 19 to October 25, 2024.",
+    "line2": "My studies have helped me develop skills in organization, project management, and teamwork, and I am confident that I can bring added value to your team.",
+    "line3": "Thanks to my training as a Web and Mobile Web Developer at AFPA Beaumont (63), I am capable of designing, developing, and maintaining high-quality web applications using the latest technologies."
   },
   "titre": "My CV",
   "button1": "Download CV",
   "title1": "Projects",
   "subtitle": "Below are some examples of projects completed during my journey",
   "button2": "All",
-  "project1": "Just Price",
-  "project2": "Hangman",
-  "surname": "Surname",
+  "project1": "Juste prix",
+  "project2": "Pendu",
+  "surname": "Last Name",
   "name": "First Name",
   "mail": "E-mail",
   "object": "Subject",
@@ -27,5 +27,6 @@
   "skills": "Programming Languages",
   "operatingSystems": "Operating Systems",
   "prénom-métier": "Ozdal Seyfullah Junior Web Developer",
-  "présentation": "Passionate about web development, I am currently in training and learning technologies such as HTML, CSS, SCSS, JavaScript, React, PHP, and Symfony. I am developing skills in creating efficient, user-focused web solutions with an emphasis on security, maintainability, and performance.\n\nMotivated and constantly staying up to date, I am capable of working independently or within a team, applying Agile/Scrum methodologies.\n\n🚀 Key skills:\n\n    Front-end: HTML, CSS, SCSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Databases: MySQL\n    Deployment: Netlify, Render, Vercel\n    Version Control: Git, GitHub"
+  "présentation": "Passionate about web development, I am currently in training and working with technologies like HTML, CSS, SCSS, JavaScript, React, PHP, and Symfony. I am developing skills in creating high-performing and user-friendly web solutions, focusing on security, maintainability, and performance.\n\nMotivated and constantly learning, I can work independently or in a team while applying Agile/Scrum methodologies.\n\n🚀 Key Skills:\n\n    Front-end: HTML, CSS, SCSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Databases: MySQL\n    Deployment: Netlify, Render, Vercel\n    Versioning: Git, GitHub",
+  "titreaccueil": "Professional Portfolio of Seyfullah Ozdal"
 }

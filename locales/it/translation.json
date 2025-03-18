@@ -1,19 +1,19 @@
 {
   "link3": "Linguaggi di programmazione",
   "link4": "Progetti",
-  "link5": "Contatti",
+  "link5": "Contatto",
   "description": {
-      "line1": "Sto cercando uno stage dal 19 agosto al 25 ottobre 2024.",
-      "line2": "I miei studi mi hanno permesso di sviluppare competenze in organizzazione, gestione dei progetti e lavoro di squadra, e sono convinto di poter portare valore al vostro team.",
-      "line3": "Grazie alla mia formazione come sviluppatore web e mobile presso l'AFPA di Beaumont (63), sono in grado di progettare, sviluppare e mantenere applicazioni web di alta qualità utilizzando le tecnologie più moderne."
+    "line1": "Sto cercando uno stage dal 19 agosto al 25 ottobre 2024.",
+    "line2": "I miei studi mi hanno permesso di sviluppare competenze in organizzazione, gestione dei progetti e lavoro di squadra, e sono convinto di poter aggiungere valore al tuo team.",
+    "line3": "Grazie alla mia formazione come sviluppatore web e web mobile presso AFPA Beaumont (63), sono in grado di progettare, sviluppare e mantenere applicazioni web di alta qualità utilizzando le ultime tecnologie."
   },
   "titre": "Il mio CV",
-  "button1": "Scarica il CV",
+  "button1": "Scarica CV",
   "title1": "Progetti",
   "subtitle": "Qui sotto alcuni esempi di progetti realizzati durante il mio percorso",
   "button2": "Tutti",
-  "project1": "Gioco del prezzo giusto",
-  "project2": "Impiccato",
+  "project1": "Juste prix",
+  "project2": "Pendu",
   "surname": "Cognome",
   "name": "Nome",
   "mail": "E-mail",
@@ -27,5 +27,6 @@
   "skills": "Linguaggi di programmazione",
   "operatingSystems": "Sistemi operativi",
   "prénom-métier": "Ozdal Seyfullah Sviluppatore web Junior",
-  "présentation": "Appassionato di sviluppo web, attualmente sono in fase di apprendimento e mi sto formando su tecnologie come HTML, CSS, SCSS, JavaScript, React, PHP e Symfony. Sto sviluppando competenze nella creazione di soluzioni web performanti e adatte agli utenti, con un focus sulla sicurezza, la manutenibilità e le performance.\n\nMotivato e sempre aggiornato, sono in grado di lavorare autonomamente o in team, applicando metodologie Agile/Scrum.\n\n🚀 Competenze principali:\n\n    Front-end: HTML, CSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Database: MySQL"
+  "présentation": "Appassionato di sviluppo web, attualmente sono in formazione e lavoro con tecnologie come HTML, CSS, SCSS, JavaScript, React, PHP e Symfony. Sto sviluppando competenze per creare soluzioni web ad alte prestazioni e facili da usare, con focus sulla sicurezza, la manutenibilità e le prestazioni.\n\nMotivato e in continuo apprendimento, posso lavorare in autonomia o in team applicando metodologie Agile/Scrum.\n\n🚀 Competenze principali:\n\n    Front-end: HTML, CSS, SCSS, JavaScript, React\n    Back-end: PHP, Symfony\n    Database: MySQL\n    Deploy: Netlify, Render, Vercel\n    Versioning: Git, GitHub",
+  "titreaccueil": "Portfolio Professionale di Seyfullah Ozdal"
 }
