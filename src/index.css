@@ -1,9 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+img.card-img-top{
+  width: 60%;
+  margin-left: 17%;
 
-.programming{
-  margin-top: 107px;
+ 
 }
+.custom-class{
+  background-color: #F5F5F5 !important;
+}
+#doc1{
+   background-color: #06B6D4 ;
+   border-radius: 20px;
+}
+
 
 #card{
   background-color: #1e3a8a;
