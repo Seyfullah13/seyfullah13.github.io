@@ -6,7 +6,7 @@ import LangagesdeProgrammation from './Langages de programmation';
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Header from "./Header";
-import Portfolio from "./Portfolio";
+import Projet from "./Projet";
 import "./index.css";
 import Avatar from "./Avatar";
 
@@ -33,7 +33,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Avatar />} />
               <Route path="/Langages de Programmation" element={<LangagesdeProgrammation />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/projet" element={<Projet />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

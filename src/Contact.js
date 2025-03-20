@@ -47,7 +47,14 @@ function Contact() {
       <motion.div className="row justify-content-center align-items-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
         <div className="col-12 col-md-8 col-lg-6">
           <motion.div className="text-center" {...textAnimation}>
-            <h1 id="Contact" style={{ color: 'white', marginBottom: '20px' }}>Contact</h1>
+        <h1 id="Contact" style={{
+          color: 'white',
+          marginBottom: '20px',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          borderRadius: '10px',
+          display: 'inline-block',
+          padding: '10px 20px'
+        }}>Contact</h1>
           </motion.div>
           <motion.div className="text-center" {...textAnimation}>
             <Form

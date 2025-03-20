@@ -44,7 +44,7 @@ function Header() {
             <Nav.Link as={NavLink} to="/Langages de Programmation" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
               {t("link3")}
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/portfolio" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
+            <Nav.Link as={NavLink} to="/Projet" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>
               {t("link4")}
             </Nav.Link>
             <Nav.Link as={NavLink} to="/contact" className="mx-3 nav-link text-white  nav-link shift" onClick={handleLinkClick}>

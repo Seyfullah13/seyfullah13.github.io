@@ -251,8 +251,7 @@ footer {
     90vh - 20px
   ); /* Hauteur ajustée pour la scrollbar, moins le padding */
   overflow-y: auto; /* Permettre le défilement vertical */
-  padding-right: 10px; /* Ajout de padding à droite */
-  padding-bottom: 10px; /* Ajout de padding en bas */
+
 }
 
 .scrollbar-container::-webkit-scrollbar {

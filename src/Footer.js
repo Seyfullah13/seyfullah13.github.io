@@ -6,11 +6,7 @@ import styles from './index.css';
 function Footer() {
     const { t } = useTranslation();
 
-    const footerAnimation = {
-        initial: { opacity: 0, x: -100 },
-        animate: { opacity: 1, x: 0 },
-        transition: { duration: 1, type: 'spring', stiffness: 120 }
-    };
+
 
     return (
         <motion.div
@@ -18,7 +14,7 @@ function Footer() {
             style={{ backgroundColor: '#1e3a8a', textAlign: 'center' }}
             initial="initial"
             animate="animate"
-            variants={footerAnimation}
+        
         >
             <div className="container">
                 <motion.span className="text-white">{t("copyrigths")}</motion.span>
