@@ -2,15 +2,9 @@
   "link3": "Langages de programmation",
   "link4": "Projets",
   "link5": "Contact",
-  "description": {
-    "line1": "Je recherche un stage du 19 août au 25 octobre 2024.",
-    "line2": "Mes études m'ont permis de développer des compétences en organisation, gestion de projet et travail d'équipe, et je suis convaincu de pouvoir apporter une valeur ajoutée à votre équipe.",
-    "line3": "Grâce à ma formation en Développeur Web et Web Mobile à l'AFPA de Beaumont (63), je suis capable de concevoir, développer et maintenir des applications web de qualité en utilisant les dernières technologies."
-  },
   "titre": "Mon CV",
   "button1": "Télécharger le CV",
   "title1": "Projets",
-  "subtitle": "Ci-dessous quelques exemples de projets réalisées durant mon parcours",
   "button2": "Tous",
   "project1": "Juste prix",
   "project2": "Pendu",
@@ -25,9 +19,8 @@
   "copyrigths": "© 2024 Mon Portfolio",
   "rights": "Tout droits réservés",
   "skills": "Langages de programmation",
-  "operatingSystems": "Système d'exploitation",
-  "prénom-métier": "Ozdal Seyfullah Developpeur web Junior",
-  "présentation": "Passionné par le développement web, je suis actuellement en apprentissage et me forme sur des technologies comme HTML, CSS, SCSS, JavaScript, React, PHP, et Symfony. Je développe des compétences en création de solutions web performantes et adaptées aux utilisateurs, avec un accent sur la sécurité, la maintenabilité et la performance.\n\nMotivé et en veille constante, je suis capable de travailler en autonomie ou en équipe, tout en appliquant les méthodologies Agile/Scrum.\n\n🚀 Compétences clés :\n\n    Front-end : HTML, CSS, SCSS, JavaScript, React\n    Back-end : PHP, Symfony\n    Bases de données : MySQL\n    Déploiement : Netlify, Render, Vercel\n    Versioning : Git, GitHub",
+  "prénom": "Ozdal Seyfullah ",
+   "présentation": "Développeur web junior,  je me forme activement pour acquérir des compétences solides et créer des solutions web efficaces et sécurisées.",
   "titreaccueil": "Portfolio Professionnel de  Seyfullah Ozdal",
   "description-html": " Le langage de balisage standard utilisé pour structurer les pages web.",
   "description-css": "  Le langage utilisé pour décrire la présentation des pages web en HTML.",
@@ -37,6 +30,8 @@
   "description-react": "   Une bibliothèque JavaScript pour construire des interfaces utilisateur dynamiques.",
   "description-Php": "   Un langage de programmation côté serveur principalement utilisé pour le développement web.",
   "description-MySql": "   Un système de gestion de base de données relationnelle open-source, utilisé pour stocker les données.",
-  "description-symfony": "   Un framework PHP open-source pour développer des applications web performantes et modulaires."
-}
+"description-symfony": "   Un framework PHP open-source pour développer des applications web performantes et modulaires.",
+ "approche": "Motivé et en constante progression, je m'engage à fournir des projets de qualité tout en développant mes compétences."
 
+
+}
