@@ -143,14 +143,96 @@ footer {
 .scrollbar-container::-webkit-scrollbar-track {
   background: none;
 }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Espace entre les cards */
+}
 
-.justeprix{
-  width: 320px;
-  height: 500px;
-  border-radius: 20px;
+.justeprix, .mastermind, .myuka , .portfolio{
+  width: 400px;      /* Format rectangulaire */
+  height: 250px;     /* Format rectangulaire */
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 8px solid #fff;
+  border: 5px solid #fff;
+  position: relative;
+  background-color: #000;
+}
+
+/* Images */
+.justeprix-img, .mastermind-img, .myuka-img ,.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Corps de la card */
+.justeprix-body, .mastermind-body, .myuka-body, .portfolio-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right 0.8s;
+}
+
+/* Titres */
+.justeprix-title, .mastermind-title, .myuka-title, .portfolio-title {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Sous-titres */
+.justeprix-sub-title, .mastermind-sub-title, .myuka-sub-title, .portfolio-sub-title {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0.3rem 0;
+}
+
+/* Description */
+.justeprix-info, .mastermind-info, .myuka-info , .portfolio-info {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+/* Boutons */
+.justeprix-btn, .mastermind-btn, .myuka-btn, .portfolio-btn {
+  color: #1f3d47;
+  background-color: #8fabba;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  width: 120px;
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
+
+/* Effet Hover */
+.justeprix:hover .justeprix-body,
+.mastermind:hover .mastermind-body,
+.myuka:hover .myuka-body , .portfolio:hover .portfolio-body {
+  right: 0;
+  transition: right 0.8s; /* Assure une transition fluide */
 }
