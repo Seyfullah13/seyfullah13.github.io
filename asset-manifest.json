@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.71a5aa10.css",
-    "main.js": "/static/js/main.ba189fdb.js",
+    "main.css": "/static/css/main.11975f50.css",
+    "main.js": "/static/js/main.ba2c51c7.js",
     "static/media/tech.png": "/static/media/tech.5c87fe3038c86d67fe42.png",
     "static/media/logo site.png": "/static/media/logo site.197e9bae884962965260.png",
     "static/media/Seyfullah.png": "/static/media/Seyfullah.930379914b12ec09c1e8.png",
     "static/media/spain.png": "/static/media/spain.56468312791bd54403a2.png",
     "static/media/united-kingdom.png": "/static/media/united-kingdom.9a82d84a95ece39ec610.png",
+    "static/media/justeprix.PNG": "/static/media/justeprix.38d2097c41ad1c5db678.PNG",
     "static/media/turkey.png": "/static/media/turkey.8307191da63c74b7191b.png",
     "static/media/world.png": "/static/media/world.0f63091ee89cae83a327.png",
     "static/media/italy.png": "/static/media/italy.61c9388400a8995f8ca3.png",
     "static/media/france.png": "/static/media/france.078f4950fd89b9f15aeb.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.7a7a1c81840c96d5a3ea.cjs",
-    "main.71a5aa10.css.map": "/static/css/main.71a5aa10.css.map",
-    "main.ba189fdb.js.map": "/static/js/main.ba189fdb.js.map"
+    "main.11975f50.css.map": "/static/css/main.11975f50.css.map",
+    "main.ba2c51c7.js.map": "/static/js/main.ba2c51c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.71a5aa10.css",
-    "static/js/main.ba189fdb.js"
+    "static/css/main.11975f50.css",
+    "static/js/main.ba2c51c7.js"
   ]
 }
