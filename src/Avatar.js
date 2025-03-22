@@ -31,7 +31,7 @@ const AvatarCustom = () => {
       }}
     >
       {/* Texte de présentation remonté au-dessus de l'avatar */}
-      <p className="font-weight-bold text-center" style={{ fontSize: "1.75rem", color: "#FFFFFF", marginBottom: "20px", backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      <p className="font-weight-bold text-center" style={{ fontSize: "1.75rem", color: "#FFFFFF", marginBottom: "20px", backgroundColor: '#1E3A8A',
             borderRadius: '10px',
             display: 'inline-block',
             padding: '10px 20px'}}>
@@ -68,7 +68,7 @@ const AvatarCustom = () => {
                 <h1 className="card-text" style={{ fontSize: "1.1rem", color: "#FFFFFF" }}>
                   {t("présentation")}
                 </h1>
-                <p> {t("approche")}  </p>
+                <p className="text-white"> {t("approche")}  </p>
   
               </div>
             </div>

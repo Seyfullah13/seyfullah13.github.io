@@ -50,7 +50,7 @@ function Contact() {
         <h1 id="Contact" style={{
           color: 'white',
           marginBottom: '20px',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backgroundColor: '#1E3A8A',
           borderRadius: '10px',
           display: 'inline-block',
           padding: '10px 20px'

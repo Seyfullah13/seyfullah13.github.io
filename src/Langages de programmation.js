@@ -19,8 +19,8 @@ function LangageDeProgrammation() {
     >
       <Container className="my-5">
         <h2 
-          className="text-center mx-auto mb-5 p-3 bg-white rounded"
-          style={{ maxWidth: '300px' }}
+          className="text-center mx-auto  text-white p-3  rounded"
+          style={{ maxWidth: '300px', backgroundColor: '#1E3A8A' }}
         >
           {t("skills")}
         </h2>
@@ -28,7 +28,7 @@ function LangageDeProgrammation() {
         <Row className="justify-content-center row-cols-1 row-cols-md-2 g-4">
           {/* Front-End Technologies */}
           <Col>
-            <h4 className="text-center mx-auto mb-3 p-3 bg-white rounded" style={{ maxWidth: '200px' }}>
+            <h4 className="text-center mx-auto mb-3 p-3  rounded" style={{ maxWidth: '200px' ,backgroundColor:'#F5F5F5', color:'#333333' }}>
               Front-End
             </h4>
             {[ 
@@ -39,11 +39,11 @@ function LangageDeProgrammation() {
               { icon: FaJsSquare, color: "#f7df1e", title: "JavaScript", desc: "description-js" },
               { icon: FaReact, color: "#61dafb", title: "React", desc: "description-react" }
             ].map((tech, index) => (
-              <Card key={index} className="text-center shadow-sm mb-3">
-                <Card.Body>
+              <Card key={tech.title} className="text-center shadow-sm mb-3" >
+                <Card.Body >
                   <tech.icon size={50} color={tech.color} />
-                  <Card.Title className="mt-3">{tech.title}</Card.Title>
-                  <Card.Text>{t(tech.desc)}</Card.Text>
+                  <Card.Title className="mt-3" style={{color:'#333333 '}}>{tech.title}</Card.Title>
+                  <Card.Text style={{color:'#333333 '}}>{t(tech.desc)}</Card.Text>
                 </Card.Body>
               </Card>
             ))}
@@ -51,7 +51,7 @@ function LangageDeProgrammation() {
 
           {/* Back-End Technologies */}
           <Col>
-            <h4 className="text-center mx-auto mb-3 p-3 bg-white rounded" style={{ maxWidth: '200px' }}>
+            <h4 className="text-center mx-auto mb-3 p-3 bg-white rounded" style={{ maxWidth: '200px' ,backgroundColor:'#F5F5F5' }}>
               Back-End
             </h4>
             {[ 
@@ -62,8 +62,8 @@ function LangageDeProgrammation() {
               <Card key={index} className="text-center shadow-sm mb-3">
                 <Card.Body>
                   <tech.icon size={50} color={tech.color} />
-                  <Card.Title className="mt-3">{tech.title}</Card.Title>
-                  <Card.Text>{t(tech.desc)}</Card.Text>
+                  <Card.Title className="mt-3" style={{color:'#333333 '}}>{tech.title}</Card.Title>
+                  <Card.Text style={{color:'#333333 '}}>{t(tech.desc)}</Card.Text>
                 </Card.Body>
               </Card>
             ))}

@@ -58,7 +58,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
           src={GlobeIcon}
           alt="Sélecteur de langue"
           className="d-block img-fluid"
-          style={{ width: "40px", height: "40px" }}
+          style={{ width: "50px", height: "50px" }}
         />
       </button>
       {isOpen && (
