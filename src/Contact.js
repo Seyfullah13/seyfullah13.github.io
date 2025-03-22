@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import ContactBackground from './images/tech.png';
 
 function Contact() {
@@ -12,7 +12,6 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Simulating email sending
     console.log('Sending email...');
     setTimeout(() => {
       console.log('Email sent successfully!');
@@ -20,21 +19,8 @@ function Contact() {
     }, 1000);
   };
 
-  const textAnimation = {
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5, ease: "linear" }
-  };
-
-  const buttonAnimation = {
-    whileHover: { scale: 1.1 },
-    whileTap: { scale: 0.9 },
-    initial: { opacity: 0, x: -200 },
-    animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "linear" } }
-  };
-
   return (
-    <div
+    <motion.div
       className="container-fluid"
       style={{
         backgroundImage: `url(${ContactBackground})`,
@@ -43,20 +29,41 @@ function Contact() {
         minHeight: '100vh',
         padding: '20px',
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
     >
-      <motion.div className="row justify-content-center align-items-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+      <motion.div
+        className="row justify-content-center align-items-center"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="col-12 col-md-8 col-lg-6">
-          <motion.div className="text-center" {...textAnimation}>
-        <h1 id="Contact" style={{
-          color: 'white',
-          marginBottom: '20px',
-          backgroundColor: '#1E3A8A',
-          borderRadius: '10px',
-          display: 'inline-block',
-          padding: '10px 20px'
-        }}>Contact</h1>
-          </motion.div>
-          <motion.div className="text-center" {...textAnimation}>
+          <div className="text-center">
+            <motion.h1
+              id="Contact"
+              style={{
+                color: 'white',
+                marginBottom: '20px',
+                backgroundColor: '#1E3A8A',
+                borderRadius: '10px',
+                display: 'inline-block',
+                padding: '10px 20px',
+              }}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              Contact
+            </motion.h1>
+          </div>
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <Form
               ref={form}
               onSubmit={sendEmail}
@@ -99,59 +106,49 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="row">
+              <motion.div className="row" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
                 <div className="col-12 text-center">
-                  <motion.button
-                    type="submit"
-                    className="btn btn-warning me-2"
-                    {...buttonAnimation}
-                  >
+                  <button type="submit" className="btn me-2" style={{ backgroundColor: '#06B6D4', color: '#333333' }}>
                     {t("button3")}
-                  </motion.button>
-                  <motion.button
-                    type="reset"
-                    className="btn btn-warning"
-                    {...buttonAnimation}
-                  >
+                  </button>
+                  <button type="reset" className="btn" style={{ backgroundColor: '#06B6D4', color: '#333333' }}>
                     {t("button4")}
-                  </motion.button>
+                  </button>
                 </div>
-              </div>
+              </motion.div>
             </Form>
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className="row justify-content-center align-items-center mt-3" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+      <motion.div
+        className="row justify-content-center align-items-center mt-3"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="col-md-6">
-          <motion.div className="text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }} {...textAnimation}>
+          <motion.div
+            className="text-center"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }}
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
             <p><strong>{t("contact")}</strong></p>
             <div className="d-flex justify-content-center align-items-center flex-column">
               <div className="mb-3">
-              <a
-  href="https://fr.linkedin.com/in/seyfullah-ozdal2"
-  target="_blank"
-  rel="noopener   noreferrer"
-  className="me-2"
-  style={{ color: 'black' }}
->
-  <FaLinkedin size={24} /> LinkedIn
-</a>
-
-                <a
-                  href="https://github.com/Seyfullah13"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'black' }}
-                >
+                <a href="https://fr.linkedin.com/in/seyfullah-ozdal2" target="_blank" rel="noopener noreferrer" className="me-2" style={{ color: 'black' }}>
+                  <FaLinkedin size={24} /> LinkedIn
+                </a>
+                <a href="https://github.com/Seyfullah13" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}>
                   <FaGithub size={24} /> GitHub
                 </a>
               </div>
-           
             </div>
           </motion.div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

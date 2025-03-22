@@ -125,25 +125,25 @@ footer {
   z-index: 1000; /* Assurez-vous que le footer est au-dessus du contenu */
 }
 .scrollbar-container {
-  height: calc(
-    90vh - 20px
-  ); /* Hauteur ajustée pour la scrollbar, moins le padding */
-  overflow-y: auto; /* Permettre le défilement vertical */
+  height: calc(90vh - 20px); /* Hauteur ajustée */
+  overflow-y: auto; /* Défilement vertical activé */
+  scroll-behavior: smooth; /* Défilement fluide */
 }
 
+/* Supprime les styles spécifiques de la scrollbar */
 .scrollbar-container::-webkit-scrollbar {
-  width: 5px; /* Largeur réduite de la scrollbar */
-  background: transparent; /* Couleur de fond transparente pour la track */
+  width: 5px;
 }
 
 .scrollbar-container::-webkit-scrollbar-thumb {
-  background-color: #38605d; /* Couleur du thumb (la partie mobile de la scrollbar) */
-  border-radius: 4px; /* Border-radius du thumb */
+  background-color: #38605d;
+  border-radius: 4px;
 }
 
 .scrollbar-container::-webkit-scrollbar-track {
-  background: none; /* Retire complètement la couleur de fond de la track (la partie fixe de la scrollbar) */
+  background: none;
 }
+
 .justeprix{
   width: 320px;
   height: 500px;
