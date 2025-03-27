@@ -54,7 +54,7 @@ function Projets() {
             />
             <div className="justeprix-body">
               <h1 className="justeprix-title">{t("titre-projet1")}</h1>
-              <p className="justeprix-sub-title">HTML Javascript
+              <p className="justeprix-sub-title">HTML Bootstrap Javascript
               </p>
               <p className="justeprix-info"> {t("description-projet1")}</p>
               <button className="justeprix-btn"> {t("titre-bouton")}</button>
@@ -70,7 +70,7 @@ function Projets() {
             />
             <div className="mastermind-body">
               <h1 className="mastermind-title">{t("titre-projet2")}</h1>
-              <p className="mastermind-sub-title">HTML CSS Javascript</p>
+              <p className="mastermind-sub-title">HTML Bootstrap Javascript</p>
               <p className="mastermind-info"> {t("description-projet2")}</p>
               <button className="mastermind-btn">{t("titre-bouton")}</button>
             </div>
@@ -103,7 +103,7 @@ function Projets() {
               <p className="portfolio-info">
               {t("description-projet4")}  
               </p>
-              <button className="portfolio-btn">{t("titre-bouton")}</button>
+              <button className="portfolio-btn">{t("titre-btn portfolio")}</button>
             </div>
           </motion.div>
         </div>
