@@ -1,6 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-// Removed duplicate import of useTranslation
+import { Container, Button } from "react-bootstrap";
 import ProjetsBackground from "./images/tech.png";
 import Justeprix from "./images/justeprix.PNG";
 import { motion } from "framer-motion";
@@ -54,10 +53,17 @@ function Projets() {
             />
             <div className="justeprix-body">
               <h1 className="justeprix-title">{t("titre-projet1")}</h1>
-              <p className="justeprix-sub-title">HTML Bootstrap Javascript
-              </p>
-              <p className="justeprix-info"> {t("description-projet1")}</p>
-              <button className="justeprix-btn"> {t("titre-bouton")}</button>
+              <p className="justeprix-sub-title">HTML Bootstrap Javascript</p>
+              <p className="justeprix-info">{t("description-projet1")}</p>
+              <Button
+                href="https://seyfullah13.github.io/justeprix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="justeprix-btn"
+                style={{ backgroundColor: '#06B6D4', color: '#333333' }}
+              >
+                {t("titre-bouton")}
+              </Button>
             </div>
           </motion.div>
           
@@ -71,10 +77,19 @@ function Projets() {
             <div className="mastermind-body">
               <h1 className="mastermind-title">{t("titre-projet2")}</h1>
               <p className="mastermind-sub-title">HTML Bootstrap Javascript</p>
-              <p className="mastermind-info"> {t("description-projet2")}</p>
-              <button className="mastermind-btn">{t("titre-bouton")}</button>
+              <p className="mastermind-info">{t("description-projet2")}</p>
+              <Button
+                
+                href="https://seyfullah13.github.io/Mastermind2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mastermind-btn"  style={{ backgroundColor: '#06B6D4', color: '#333333' }}
+              >
+                {t("titre-bouton")}
+              </Button>
             </div>
           </motion.div>
+          
           <motion.div whileHover={imageHover} className="myuka">
             <img
               src={Myuka}
@@ -85,8 +100,16 @@ function Projets() {
             <div className="myuka-body">
               <h1 className="myuka-title">{t("titre-projet3")}</h1>
               <p className="myuka-sub-title">HTML CSS React</p>
-              <p className="myuka-info"> {t("projet3")}  </p>
-              <button className="myuka-btn">{t("titre-bouton")}</button>
+              <p className="myuka-info">{t("projet3")}</p>
+              <Button
+                href="https://seyfullah13.github.io/Myuka/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="myuka-btn"
+                style={{ backgroundColor: '#06B6D4', color: '#333333' }}
+              >
+                {t("titre-bouton")}
+              </Button>
             </div>
           </motion.div>
 
@@ -100,10 +123,16 @@ function Projets() {
             <div className="portfolio-body">
               <h1 className="portfolio-title">{t("titre-projet4")}</h1>
               <p className="portfolio-sub-title">HTML CSS React Bootstrap</p>
-              <p className="portfolio-info">
-              {t("description-projet4")}  
-              </p>
-              <button className="portfolio-btn">{t("titre-btn portfolio")}</button>
+              <p className="portfolio-info">{t("description-projet4")}</p>
+              <Button
+                
+                href="https://seyfullah13.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-btn" style={{ backgroundColor: '#06B6D4', color: '#333333' }}
+              >
+                {t("titre-btn portfolio")}
+              </Button>
             </div>
           </motion.div>
         </div>
