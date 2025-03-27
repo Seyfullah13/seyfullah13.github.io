@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';

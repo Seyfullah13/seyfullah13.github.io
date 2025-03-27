@@ -33,7 +33,7 @@ const AvatarCustom = () => {
         backgroundSize: "cover",
         minHeight: "100vh",
         backgroundPosition: "center",
-        padding: "30px 0",
+        padding: "10px 0",
       }}
       initial="hidden"
       animate="visible"
@@ -44,19 +44,19 @@ const AvatarCustom = () => {
         style={{
           fontSize: "1.75rem",
           color: "#FFFFFF",
-          marginBottom: "20px",
           backgroundColor: "#1E3A8A",
           borderRadius: "10px",
           display: "inline-block",
           padding: "10px 20px",
+          marginBottom: "2rem", // Ajustement plus précis avec rem
         }}
       >
         {t("titreaccueil")}
       </p>
 
-      <div className="container mt-5">
+      <div className="container">
         <div className="row align-items-center justify-content-center">
-          <div className="col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+          <div className="col-md-4 d-flex justify-content-center mb-3">
             <Box sx={{ borderRadius: 3, padding: 1 }}>
               <Badge
                 overlap="circular"
@@ -77,13 +77,13 @@ const AvatarCustom = () => {
             <div className="card shadow-lg border-0" id="card">
               <div className="card-body">
                 <h5
-                  className="card-title text-white font-weight-bold"
+                  className="card-title text-white font-weight-bold mb-2"
                   style={{ fontSize: "1.75rem" }}
                 >
                   {t("prénom")}
                 </h5>
                 <h1
-                  className="card-text"
+                  className="card-text mb-2"
                   style={{ fontSize: "1.1rem", color: "#FFFFFF" }}
                 >
                   {t("présentation")}
