@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -11,12 +12,15 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     console.log('Sending email...');
     setTimeout(() => {
       console.log('Email sent successfully!');
       e.target.reset();
     }, 1000);
+  };
+
+  const openLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -69,53 +73,29 @@ function Contact() {
               onSubmit={sendEmail}
               style={{ padding: '20px', borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
             >
-              <div className="row mb-3">
-                <div className="col-12 col-md-6 mb-2 mb-md-0">
-                  <Form.Group controlId="firstName">
-                    <Form.Control type="text" name="firstName" placeholder={t("surname")} />
-                  </Form.Group>
-                </div>
-                <div className="col-12 col-md-6">
-                  <Form.Group controlId="lastName">
-                    <Form.Control type="text" name="lastName" placeholder={t("name")} />
-                  </Form.Group>
-                </div>
+              <Form.Group className="mb-3" controlId="firstName">
+                <Form.Control type="text" name="firstName" placeholder={t("surname")} />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="lastName">
+                <Form.Control type="text" name="lastName" placeholder={t("name")} />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="email">
+                <Form.Control type="email" name="email" placeholder={t("mail")} />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="subject">
+                <Form.Control type="text" name="subject" placeholder={t("object")} />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="message">
+                <Form.Control as="textarea" rows={6} name="message" placeholder={t("message")} />
+              </Form.Group>
+              <div className="text-center">
+                <Button type="submit" variant="info" className="me-2">
+                  {t("button3")}
+                </Button>
+                <Button type="reset" variant="info">
+                  {t("button4")}
+                </Button>
               </div>
-
-              <div className="row mb-3">
-                <div className="col-12">
-                  <Form.Group controlId="email">
-                    <Form.Control type="email" name="email" placeholder={t("mail")} />
-                  </Form.Group>
-                </div>
-              </div>
-
-              <div className="row mb-3">
-                <div className="col-12">
-                  <Form.Group controlId="subject">
-                    <Form.Control type="text" name="subject" placeholder={t("object")} />
-                  </Form.Group>
-                </div>
-              </div>
-
-              <div className="row mb-3">
-                <div className="col-12">
-                  <Form.Group controlId="message">
-                    <Form.Control as="textarea" rows={6} name="message" placeholder={t("message")} />
-                  </Form.Group>
-                </div>
-              </div>
-
-              <motion.div className="row" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                <div className="col-12 text-center">
-                  <button type="submit" className="btn me-2" style={{ backgroundColor: '#06B6D4', color: '#333333' }}>
-                    {t("button3")}
-                  </button>
-                  <button type="reset" className="btn" style={{ backgroundColor: '#06B6D4', color: '#333333' }}>
-                    {t("button4")}
-                  </button>
-                </div>
-              </motion.div>
             </Form>
           </motion.div>
         </div>
@@ -135,15 +115,13 @@ function Contact() {
             transition={{ duration: 0.4 }}
           >
             <p><strong>{t("contact")}</strong></p>
-            <div className="d-flex justify-content-center align-items-center flex-column">
-              <div className="mb-3">
-                <a href="https://fr.linkedin.com/in/seyfullah-ozdal2" target="_blank" rel="noopener noreferrer" className="me-2" style={{ color: 'black' }}>
-                  <FaLinkedin size={24} /> LinkedIn
-                </a>
-                <a href="https://github.com/Seyfullah13" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}>
-                  <FaGithub size={24} /> GitHub
-                </a>
-              </div>
+            <div className="d-flex justify-content-center align-items-center gap-2">
+              <Button variant="info" onClick={() => openLink("https://fr.linkedin.com/in/seyfullah-ozdal2")}> 
+                <FaLinkedin size={24} /> LinkedIn
+              </Button>
+              <Button variant="info" onClick={() => openLink("https://github.com/Seyfullah13")}> 
+                <FaGithub size={24} /> GitHub
+              </Button>
             </div>
           </motion.div>
         </div>
