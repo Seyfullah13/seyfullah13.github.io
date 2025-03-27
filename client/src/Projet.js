@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
+// Removed duplicate import of useTranslation
 import ProjetsBackground from "./images/tech.png";
 import Justeprix from "./images/justeprix.PNG";
 import { motion } from "framer-motion";
@@ -8,6 +8,7 @@ import "./index.css";
 import Mastermind from "./images/Mastermind.PNG";
 import Myuka from "./images/Myuka.PNG";
 import Portfolio from "./images/Portfolio.png";
+import { useTranslation } from "react-i18next";
 
 function Projets() {
   const { t } = useTranslation();
