@@ -53,11 +53,11 @@ function Projets() {
               style={{ maxWidth: "100%", borderRadius: "10px" }}
             />
             <div className="justeprix-body">
-              <h1 className="justeprix-title">Justeprix</h1>
+              <h1 className="justeprix-title">{t("titre-projet1")}</h1>
               <p className="justeprix-sub-title">HTML Javascript
               </p>
-              <p className="justeprix-info">Le Juste Prix est un jeu où l'utilisateur doit deviner une valeur cible générée aléatoirement. À chaque tentative, le programme compare la proposition à ce nombre et indique si le prix à trouver est plus haut ou plus bas, jusqu'à ce que l'utilisateur trouve la valeur exacte.</p>
-              <button className="justeprix-btn">Visiter</button>
+              <p className="justeprix-info"> {t("description-projet1")}</p>
+              <button className="justeprix-btn"> {t("titre-bouton")}</button>
             </div>
           </motion.div>
           
@@ -69,10 +69,10 @@ function Projets() {
               style={{ maxWidth: "100%", borderRadius: "10px" }}
             />
             <div className="mastermind-body">
-              <h1 className="mastermind-title">Mastermind</h1>
+              <h1 className="mastermind-title">{t("titre-projet2")}</h1>
               <p className="mastermind-sub-title">HTML CSS Javascript</p>
-              <p className="mastermind-info">Le Mastermind est un programme où l'utilisateur devine une combinaison secrète générée par l'ordinateur. Après chaque essai, des indices indiquent les valeurs correctes bien placées et mal placées. Le jeu se termine lorsque la combinaison est trouvée ou après un nombre limité de tentatives.</p>
-              <button className="mastermind-btn">Visiter</button>
+              <p className="mastermind-info"> {t("description-projet2")}</p>
+              <button className="mastermind-btn">{t("titre-bouton")}</button>
             </div>
           </motion.div>
           <motion.div whileHover={imageHover} className="myuka">
@@ -83,10 +83,10 @@ function Projets() {
               style={{ maxWidth: "100%", borderRadius: "10px" }}
             />
             <div className="myuka-body">
-              <h1 className="myuka-title">Myuka</h1>
+              <h1 className="myuka-title">{t("titre-projet3")}</h1>
               <p className="myuka-sub-title">HTML CSS React</p>
-              <p className="myuka-info">Myuka est un projet qui permet de rechercher des produits alimentaires via l'API d'OpenFoodFacts. L'utilisateur entre un code-barres, et l'application affiche les informations disponibles (nutrition, ingrédients, allergènes, etc.) si le produit est trouvé.</p>
-              <button className="myuka-btn">Visiter</button>
+              <p className="myuka-info"> {t("projet3")}  </p>
+              <button className="myuka-btn">{t("titre-bouton")}</button>
             </div>
           </motion.div>
 
@@ -98,12 +98,12 @@ function Projets() {
               style={{ maxWidth: "100%", borderRadius: "10px" }}
             />
             <div className="portfolio-body">
-              <h1 className="portfolio-title">Portfolio</h1>
+              <h1 className="portfolio-title">{t("titre-projet4")}</h1>
               <p className="portfolio-sub-title">HTML CSS React Bootstrap</p>
               <p className="portfolio-info">
-                Ce site est mon portfolio personnel, où je présente mes projets, mes compétences et mon parcours. Il est hébergé sur GitHub Pages.
+              {t("description-projet4")}  
               </p>
-              <button className="portfolio-btn">Visiter</button>
+              <button className="portfolio-btn">{t("titre-bouton")}</button>
             </div>
           </motion.div>
         </div>

@@ -2,12 +2,7 @@
   "link3": "Langages de programmation",
   "link4": "Projets",
   "link5": "Contact",
-  "titre": "Mon CV",
-  "button1": "Télécharger le CV",
   "title1": "Projets",
-  "button2": "Tous",
-  "project1": "Juste prix",
-  "project2": "Pendu",
   "surname": "Nom",
   "name": "Prénom",
   "mail": "E-mail",
@@ -31,7 +26,14 @@
   "description-Php": "   Un langage de programmation côté serveur principalement utilisé pour le développement web.",
   "description-MySql": "   Un système de gestion de base de données relationnelle open-source, utilisé pour stocker les données.",
 "description-symfony": "   Un framework PHP open-source pour développer des applications web performantes et modulaires.",
- "approche": "Motivé et en constante progression, je m'engage à fournir des projets de qualité tout en développant mes compétences."
-
-
+ "approche": "Motivé et en constante progression, je m'engage à fournir des projets de qualité tout en développant mes compétences.",
+"titre-projet1":"JustePrix",
+"description-projet1":"Le Juste Prix est un jeu où l'utilisateur doit deviner une valeur cible générée aléatoirement. À chaque tentative, le programme compare la proposition à ce nombre et indique si le prix à trouver est plus haut ou plus bas, jusqu'à ce que l'utilisateur trouve la valeur exacte.",
+"titre-projet2": "Mastermind",
+"description-projet2":"Le Mastermind est un jeu de réflexion où l'utilisateur doit deviner une combinaison de couleurs générée aléatoirement. À chaque tentative, le programme compare la proposition à la combinaison et indique le nombre de couleurs correctes et bien placées, ainsi que le nombre de couleurs correctes mais mal placées.",
+"titre-bouton":"Voir le projet",
+"titre-projet3":"Myuka",
+"projet3":" Myuka est un projet qui permet de rechercher des produits alimentaires via l'API d'OpenFoodFacts. L'utilisateur entre un code-barres, et l'application affiche les informations disponibles (nutrition, ingrédients, allergènes, etc.) si le produit est trouvé.",
+"titre-projet4":"Portfolio",
+"description-projet4":" Ce site est mon portfolio personnel, où je présente mes projets, mes compétences et mon parcours. Il est hébergé sur GitHub Pages."
 }
