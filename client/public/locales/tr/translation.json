@@ -34,11 +34,13 @@
   "description-projet2": "Mastermind: rastgele bir renk kombinasyonu tahmin edin. Her deneme, doğru yerleştirilen renklerin sayısını ve yanlış yerleştirilen renkleri döndürür.",
   "titre-bouton": "Projeyi Görüntüle",
   "titre-projet3": "Myuka",
-  "projet3": "Myuka: OpenFoodFacts API aracılığıyla gıda ürünleri arayın. Kullanıcı bir barkod girer ve ürün bulunursa uygulama bilgileri (beslenme, içerik maddeleri, alerjenler, vb.) gösterir.",
+  "projet3": "Myuka: OpenFoodFacts API aracılığıyla gıda ürünleri arayın. Kullanıcı bir barkod girer ve ürün bulunursa uygulama bilgileri (beslenme, içerikler, alerjenler, vb.) gösterir.",
   "titre-projet4": "Portföy",
   "description-projet4": "Bu site kişisel portföyüm, projelerimi, becerilerimi ve tecrübelerimi sergiliyorum. GitHub Pages üzerinde barındırılıyor.",
   "titre-btn portfolio": "Buradasın",
   "titre": "Randevu Alma",
   "raison": "Randevu alma nedeni",
-  "heureDebut": "Başlangıç Saati"
+  "heureDebut": "Başlangıç Saati",
+  "enregistrer": "Kaydet",
+  "rendezVous": "Randevu"
 }
