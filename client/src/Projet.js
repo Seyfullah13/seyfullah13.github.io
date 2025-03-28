@@ -2,35 +2,76 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import ProjetsBackground from "./images/tech.png";
 import Justeprix from "./images/justeprix.PNG";
-import { motion } from "framer-motion";
-import "./index.css";
 import Mastermind from "./images/Mastermind.PNG";
 import Myuka from "./images/Myuka.PNG";
 import Portfolio from "./images/Portfolio.png";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import "./index.css";
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const imageHover = {
+  scale: 1.05,
+  transition: { duration: 0.3 },
+};
+
+const backgroundStyle = {
+  backgroundImage: `url(${ProjetsBackground})`,
+  backgroundSize: "cover",
+  minHeight: "100vh",
+  paddingBottom: "5rem",
+};
 
 function Projets() {
   const { t } = useTranslation();
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
-  const imageHover = {
-    scale: 1.05,
-    transition: { duration: 0.3 },
-  };
+  const projects = [
+    {
+      id: "justeprix",
+      image: Justeprix,
+      alt: "Juste prix",
+      title: t("titre-projet1"),
+      subtitle: "HTML Bootstrap Javascript",
+      description: t("description-projet1"),
+      link: "https://seyfullah13.github.io/justeprix/",
+    },
+    {
+      id: "mastermind",
+      image: Mastermind,
+      alt: "Mastermind",
+      title: t("titre-projet2"),
+      subtitle: "HTML Bootstrap Javascript",
+      description: t("description-projet2"),
+      link: "https://seyfullah13.github.io/Mastermind2/",
+    },
+    {
+      id: "myuka",
+      image: Myuka,
+      alt: "Myuka",
+      title: t("titre-projet3"),
+      subtitle: "HTML CSS React",
+      description: t("projet3"),
+      link: "https://seyfullah13.github.io/Myuka/",
+    },
+    {
+      id: "portfolio",
+      image: Portfolio,
+      alt: "Portfolio",
+      title: t("titre-projet4"),
+      subtitle: "HTML CSS React Bootstrap",
+      description: t("description-projet4"),
+      link: "https://seyfullah13.github.io/",
+    },
+  ];
 
   return (
     <motion.div
       className="container-fluid d-flex flex-column align-items-center text-center"
-      style={{
-        backgroundImage: `url(${ProjetsBackground})`,
-        backgroundSize: "cover",
-        minHeight: "100vh",
-        paddingBottom: "5rem",
-      }}
+      style={backgroundStyle}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -44,97 +85,36 @@ function Projets() {
           {t("title1")}
         </h1>
         <div className="cards-container">
-          <motion.div whileHover={imageHover} className="justeprix">
-            <img
-              src={Justeprix}
-              alt="Juste prix"
-              className="justeprix-img"
-              style={{ maxWidth: "100%", borderRadius: "10px" }}
-            />
-            <div className="justeprix-body">
-              <h1 className="justeprix-title">{t("titre-projet1")}</h1>
-              <p className="justeprix-sub-title">HTML Bootstrap Javascript</p>
-              <p className="justeprix-info">{t("description-projet1")}</p>
-              <Button
-                href="https://seyfullah13.github.io/justeprix/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="justeprix-btn"
-                style={{ backgroundColor: '#06B6D4', color: '#333333' }}
-              >
-                {t("titre-bouton")}
-              </Button>
-            </div>
-          </motion.div>
-          
-          <motion.div whileHover={imageHover} className="mastermind">
-            <img
-              src={Mastermind}
-              alt="Mastermind"
-              className="mastermind-img"
-              style={{ maxWidth: "100%", borderRadius: "10px" }}
-            />
-            <div className="mastermind-body">
-              <h1 className="mastermind-title">{t("titre-projet2")}</h1>
-              <p className="mastermind-sub-title">HTML Bootstrap Javascript</p>
-              <p className="mastermind-info">{t("description-projet2")}</p>
-              <Button
-                
-                href="https://seyfullah13.github.io/Mastermind2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mastermind-btn"  style={{ backgroundColor: '#06B6D4', color: '#333333' }}
-              >
-                {t("titre-bouton")}
-              </Button>
-            </div>
-          </motion.div>
-          
-          <motion.div whileHover={imageHover} className="myuka">
-            <img
-              src={Myuka}
-              alt="Myuka"
-              className="myuka-img"
-              style={{ maxWidth: "100%", borderRadius: "10px" }}
-            />
-            <div className="myuka-body">
-              <h1 className="myuka-title">{t("titre-projet3")}</h1>
-              <p className="myuka-sub-title">HTML CSS React</p>
-              <p className="myuka-info">{t("projet3")}</p>
-              <Button
-                href="https://seyfullah13.github.io/Myuka/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="myuka-btn"
-                style={{ backgroundColor: '#06B6D4', color: '#333333' }}
-              >
-                {t("titre-bouton")}
-              </Button>
-            </div>
-          </motion.div>
-
-          <motion.div whileHover={imageHover} className="portfolio">
-            <img
-              src={Portfolio}
-              alt="Portfolio"
-              className="portfolio-img"
-              style={{ maxWidth: "100%", borderRadius: "10px" }}
-            />
-            <div className="portfolio-body">
-              <h1 className="portfolio-title">{t("titre-projet4")}</h1>
-              <p className="portfolio-sub-title">HTML CSS React Bootstrap</p>
-              <p className="portfolio-info">{t("description-projet4")}</p>
-              <Button
-                
-                href="https://seyfullah13.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="portfolio-btn" style={{ backgroundColor: '#06B6D4', color: '#333333' }}
-              >
-                {t("titre-btn portfolio")}
-              </Button>
-            </div>
-          </motion.div>
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              whileHover={imageHover}
+              className={project.id}
+            >
+              <img
+                src={project.image}
+                alt={project.alt}
+                className={`${project.id}-img`}
+                style={{ maxWidth: "100%", borderRadius: "10px" }}
+              />
+              <div className={`${project.id}-body`}>
+                <h1 className={`${project.id}-title`}>{project.title}</h1>
+                <p className={`${project.id}-sub-title`}>{project.subtitle}</p>
+                <p className={`${project.id}-info`}>{project.description}</p>
+                <Button
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${project.id}-btn`}
+                  style={{ backgroundColor: "#06B6D4", color: "#333333" }}
+                >
+                  {project.id === "portfolio"
+                    ? t("titre-btn portfolio")
+                    : t("titre-bouton")}
+                </Button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </Container>
     </motion.div>

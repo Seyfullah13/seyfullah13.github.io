@@ -1,99 +1,115 @@
 import React from "react";
-import { Badge, Box, Avatar } from "@mui/material";
+import { Badge, Box, Avatar, Container, Card, CardContent, Typography, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import avatarIcon from "./images/Seyfullah.png";
 import AvatarBackground from "./images/tech.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import { useTranslation } from "react-i18next";
 
 // Styled Avatar avec MUI
-const StyledAvatar = styled(Avatar)({
-  width: "224px",
-  height: "289px",
-  borderRadius: "10px",
+const StyledAvatar = styled(Avatar)(({ theme }) => ({
+  width: 224,
+  height: 289,
+  borderRadius: 10,
   objectFit: "cover",
   border: "4px solid white",
-});
+}));
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const backgroundStyle = {
+  backgroundImage: `url(${AvatarBackground})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  minHeight: "100vh",
+  padding: "10px 0",
+};
+
+const hoverCardVariants = {
+  hover: { scale: 1.02, transition: { duration: 0.3 } },
+};
 
 const AvatarCustom = () => {
   const { t } = useTranslation();
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
   return (
     <motion.div
-      className="container-fluid d-flex align-items-center justify-content-center flex-column"
-      style={{
-        backgroundImage: `url(${AvatarBackground})`,
-        backgroundSize: "cover",
-        minHeight: "100vh",
-        backgroundPosition: "center",
-        padding: "10px 0",
-      }}
+      className="d-flex flex-column align-items-center justify-content-center"
+      style={backgroundStyle}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <p
-        className="font-weight-bold text-center"
-        style={{
+      <Typography
+        variant="h1"
+        component="h1"
+        sx={{
           fontSize: "1.75rem",
           color: "#FFFFFF",
           backgroundColor: "#1E3A8A",
-          borderRadius: "10px",
+          borderRadius: 1,
           display: "inline-block",
-          padding: "10px 20px",
-          marginBottom: "2rem", // Ajustement plus précis avec rem
+          px: 2,
+          py: 1,
+          mb: 4,
+          textAlign: "center",
         }}
       >
         {t("titreaccueil")}
-      </p>
+      </Typography>
 
-      <div className="container">
-        <div className="row align-items-center justify-content-center">
-          <div className="col-md-4 d-flex justify-content-center mb-3">
-            <Box sx={{ borderRadius: 3, padding: 1 }}>
+      <Container>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={2}
+          alignItems="center"
+          justifyContent="center"
+        >
+          {/* Section Avatar */}
+          <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ borderRadius: 3, p: 1, display: "inline-block" }}>
               <Badge
                 overlap="circular"
                 anchorOrigin={{ vertical: "top", horizontal: "right" }}
                 variant="dot"
-                sx={{ border: "0px solid white", width: "fit-content" }}
+                sx={{ border: 0, width: "fit-content" }}
               >
-                <StyledAvatar
-                  alt="Portrait de Seyfullah Ozdal"
-                  src={avatarIcon}
-                  id="avatar"
-                />
+                <StyledAvatar alt="Portrait de Seyfullah Ozdal" src={avatarIcon} id="avatar" />
               </Badge>
             </Box>
-          </div>
+          </Box>
 
-          <div className="col-md-6">
-            <div className="card shadow-lg border-0" id="card">
-              <div className="card-body">
-                <h5
-                  className="card-title text-white font-weight-bold mb-2"
-                  style={{ fontSize: "1.75rem" }}
-                >
-                  {t("prénom")}
-                </h5>
-                <h1
-                  className="card-text mb-2"
-                  style={{ fontSize: "1.1rem", color: "#FFFFFF" }}
-                >
-                  {t("présentation")}
-                </h1>
-                <p className="text-white">{t("approche")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          {/* Section Information */}
+          <Box sx={{ width: { xs: "100%", md: "60%" } }}>
+            <motion.div whileHover="hover" variants={hoverCardVariants}>
+              <Card
+                sx={{
+                  boxShadow: 3,
+                  border: 0,
+                  backgroundColor: "#1E3A8A", // fond bleu foncé semi-transparent pour le texte
+                }}
+              >
+                <CardContent>
+                  <Typography variant="h5" component="h5" sx={{ fontSize: "1.75rem", color: "#FFFFFF", mb: 2 }}>
+                    {t("prénom")}
+                  </Typography>
+                  <Typography variant="body1" component="p" sx={{ fontSize: "1.1rem", color: "#FFFFFF", mb: 2 }}>
+                    {t("présentation")}
+                  </Typography>
+                  <Typography variant="body2" component="p" sx={{ color: "#FFFFFF" }}>
+                    {t("approche")}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </Box>
+        </Stack>
+      </Container>
     </motion.div>
   );
 };
