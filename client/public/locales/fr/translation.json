@@ -2,6 +2,7 @@
   "link3": "Langages de programmation",
   "link4": "Projets",
   "link5": "Contact",
+  "link6":"Prise de Rendez vous",
   "title1": "Projets",
   "surname": "Nom",
   "name": "Prénom",
@@ -36,5 +37,6 @@
 "projet3":" Myuka : recherche de produits alimentaires via l'API d'OpenFoodFacts. L'utilisateur saisit un code-barres, et l'application affiche les infos (nutrition, ingrédients, allergènes, etc.) si le produit est trouvé.",
 "titre-projet4":"Portfolio",
 "description-projet4":" Ce site est mon portfolio personnel, où je présente mes projets, mes compétences et mon parcours. Il est hébergé sur GitHub Pages.",
-"titre-btn portfolio":"Vous etes ici"
+"titre-btn portfolio":"Vous etes ici",
+"titre":"Prise de rendez-vous"
 }

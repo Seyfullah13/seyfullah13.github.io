@@ -52,7 +52,7 @@ function Header() {
             <motion.div variants={linkVariants} whileHover="hover" style={{ display: "inline-block" }}>
               <Nav.Link
                 as={NavLink}
-                to="/Langages de Programmation"
+                to="/langages-de-programmation"
                 className="mx-3 nav-link text-white"
                 onClick={handleLinkClick}
               >
@@ -62,13 +62,25 @@ function Header() {
             <motion.div variants={linkVariants} whileHover="hover" style={{ display: "inline-block" }}>
               <Nav.Link
                 as={NavLink}
-                to="/Projet"
+                to="/projet"
                 className="mx-3 nav-link text-white"
                 onClick={handleLinkClick}
               >
                 {t("link4")}
               </Nav.Link>
             </motion.div>
+            <motion.div variants={linkVariants} whileHover="hover" style={{ display: "inline-block" }}>
+              <Nav.Link
+                as={NavLink}
+                to="/prise-de-rendez-vous"
+                className="mx-3 nav-link text-white"
+                onClick={handleLinkClick}
+              >
+                {t("link6")}
+              </Nav.Link>
+            </motion.div>
+            
+            
             <motion.div variants={linkVariants} whileHover="hover" style={{ display: "inline-block" }}>
               <Nav.Link
                 as={NavLink}
@@ -79,6 +91,7 @@ function Header() {
                 {t("link5")}
               </Nav.Link>
             </motion.div>
+          
           </Nav>
           <Nav>
             <LanguageSelector onLanguageChange={handleLanguageChange} />

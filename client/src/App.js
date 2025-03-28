@@ -9,6 +9,7 @@ import Header from "./Header";
 import Projet from "./Projet";
 import "./index.css";
 import Avatar from "./Avatar";
+import Rdv from "./Rdv"; // Import the Rdv component
 
 function App() {
   useEffect(() => {
@@ -32,8 +33,9 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Avatar />} />
-              <Route path="/Langages de Programmation" element={<LangagesdeProgrammation />} />
+              <Route path="/Langages-de-Programmation" element={<LangagesdeProgrammation />} />
               <Route path="/projet" element={<Projet />} />
+              <Route path="/prise-de-rendez-vous" element={<Rdv />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
