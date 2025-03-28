@@ -38,5 +38,8 @@
 "titre-projet4":"Portfolio",
 "description-projet4":" Ce site est mon portfolio personnel, où je présente mes projets, mes compétences et mon parcours. Il est hébergé sur GitHub Pages.",
 "titre-btn portfolio":"Vous etes ici",
-"titre":"Prise de rendez-vous"
+"titre":"Prise de rendez-vous",
+"raison":"Raison de la prise de rendez-vous",
+"heureDebut":"Heure de début"
+
 }
